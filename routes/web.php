@@ -10,6 +10,7 @@ use App\Http\Controllers\logs;
 use App\Http\Controllers\logsErrosController;
 use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\SMTP;
+use App\Http\Controllers\PedidosController;
 
 use App\Http\Controllers\ConfigCarros;
 // ALTERAHEAD
@@ -178,6 +179,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/nova-senha', [Login::class, 'replaceTempPassword'])->name('send.temp.password');
 });
 
+
+Route::get('/listagem', [PedidosController::class, 'index'])->name('list.products');
+Route::get('/listagem/create', [PedidosController::class, 'create'])->name('list.create');
+Route::get('/listagem/update', [PedidosController::class, 'update'])->name('list.update');
 
 
 Route::get('/login', [Login::class, 'index'])->name('login');

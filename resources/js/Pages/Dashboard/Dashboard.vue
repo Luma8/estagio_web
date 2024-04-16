@@ -1,240 +1,153 @@
-<template>	
+<template>
 	<div class="items-center justify-center w-full">
-	<!-- Card code block start -->
-	<div class="bg-white  shadow rounded">
-		<div class="relative">
-			<img class="h-56 shadow rounded-t w-full object-cover object-center" src="/images/dash.jpg" alt="" />
-			<div class="inset-0 m-auto w-24 h-24 absolute bottom-0 -mb-12 xl:ml-10 rounded border-2 shadow border-white">
-				<img class="w-full h-full overflow-hidden object-cover rounded" :src="$page.props.user?.profile_picture" onerror="this.src='/images/profile_default.png';" alt="" />
+		<div class="flex items-center justify-between">
+			<div class="flex flex-col">
+				<span class="font-semibold text-[14px] text-[#858585] mb-0">Bem-vind de volta, {{ $page.props.user?.name
+					}}!</span>
+				<h1 class="font-bold text-[20px] mb-0">Dashboard</h1>
 			</div>
 		</div>
-		<div class="px-5 xl:px-10 pb-10">
-			<div class="flex justify-center xl:justify-end w-full pt-16 xl:pt-5">
-				<div class="flex items-center">
-					<svg class="w-4 mr-1 text-yellow-400 icon icon-tabler icon-tabler-star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-						<path stroke="none" fill="none" d="M0 0h24v24H0z" />
-						<path fill="currentColor" d="M12 17.75l-6.172 3.245 1.179-6.873-4.993-4.867 6.9-1.002L12 2l3.086 6.253 6.9 1.002-4.993 4.867 1.179 6.873z" />
-					</svg>
-					<svg class="w-4 mr-1 text-yellow-400 icon icon-tabler icon-tabler-star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-						<path stroke="none" fill="none" d="M0 0h24v24H0z" />
-						<path fill="currentColor" d="M12 17.75l-6.172 3.245 1.179-6.873-4.993-4.867 6.9-1.002L12 2l3.086 6.253 6.9 1.002-4.993 4.867 1.179 6.873z" />
-					</svg>
-					<svg class="w-4 mr-1 text-yellow-400 icon icon-tabler icon-tabler-star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-						<path stroke="none" fill="none" d="M0 0h24v24H0z" />
-						<path fill="currentColor" d="M12 17.75l-6.172 3.245 1.179-6.873-4.993-4.867 6.9-1.002L12 2l3.086 6.253 6.9 1.002-4.993 4.867 1.179 6.873z" />
-					</svg>
-					<svg class="w-4 mr-1 text-yellow-400 icon icon-tabler icon-tabler-star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-						<path stroke="none" fill="none" d="M0 0h24v24H0z" />
-						<path fill="currentColor" d="M12 17.75l-6.172 3.245 1.179-6.873-4.993-4.867 6.9-1.002L12 2l3.086 6.253 6.9 1.002-4.993 4.867 1.179 6.873z" />
-					</svg>
-					<svg class="w-4 mr-1 text-yellow-400 icon icon-tabler icon-tabler-star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-						<path stroke="none" fill="none" d="M0 0h24v24H0z" />
-						<path fill="currentColor" d="M12 17.75l-6.172 3.245 1.179-6.873-4.993-4.867 6.9-1.002L12 2l3.086 6.253 6.9 1.002-4.993 4.867 1.179 6.873z" />
-					</svg>
+		<div class="flex gap-3 mt-[24px]">
+			<div class="flex-grow flex justify-between items-center py-4 px-[32px] bg-white rounded-xl">
+				<div class="flex flex-col">
+					<span class="text-[14px] text-[#858585]">item A</span>
+					<strong class="text-[24px] font-bold">$682.5</strong>
 				</div>
-			</div>
-			<div class="pt-3 xl:pt-5 flex flex-col xl:flex-row items-start xl:items-center justify-between">
-				<div class="xl:pr-16 w-full xl:w-2/3">
-					<Link as="button"  :href="route('form.update.profile')" title="Clique para editar o perfil">
-					<div class="text-center xl:text-left mb-3 xl:mb-0 flex flex-col xl:flex-row items-center justify-between xl:justify-start">
-						<h2 class="mb-3 xl:mb-0 xl:mr-4 text-2xl text-gray-800  font-medium tracking-normal">{{$page.props?.user?.name}}</h2>
-						<div class="text-sm bg-indigo-700 dark:bg-indigo-600 text-white px-5 py-1 font-normal rounded-full">{{ $page.props?.user?.email }}</div>
+				<div class="flex gap-x-3">
+					<div class="bg-gray-300/90 w-[9px] rounded-2xl h-[60px] flex items-end">
+						<span class="w-full h-[80%] rounded-2xl bg-[#F8E329]"></span>
 					</div>
-					<p class="text-center xl:text-left mt-2 text-sm tracking-normal text-gray-600 dark:text-gray-400 leading-5">Bem-Vindo de Volta! Este é o seu Dashboard, onde poderá acompanhar algumas informações básicas da sua organização! Alguns botões nesta tela necessitam de permissões de acesso. Caso não consiga acessar algum botão, solicite o seu acesso ao administrador do sistema.</p>
-					</Link>
-				</div>
-
-				<div class="xl:px-10 xl:border-l xl:border-r w-full py-5 flex items-start justify-center xl:w-1/3">
-					<div class="mr-6 xl:mr-10">
-					
-						<h2 class="text-gray-600 dark:text-gray-400 font-bold text-xl xl:text-2xl leading-6 mb-2 text-center">14</h2>
-						<p class="text-gray-800  text-sm xl:text-xl leading-5">Dados 1</p>
-					
+					<div class="bg-gray-300/90 w-[9px] rounded-2xl h-[60px] flex items-end">
+						<span class="w-full h-[30%] rounded-2xl bg-[#F8E329]"></span>
 					</div>
-					<div class="mr-6 xl:mr-10">
-					
-						<h2 class="text-gray-600 dark:text-gray-400 font-bold text-xl xl:text-2xl leading-6 mb-2 text-center">23</h2>
-						<p class="text-gray-800  text-sm xl:text-xl leading-5">Dados 2</p>
-						
+					<div class="bg-gray-300/90 w-[9px] rounded-2xl h-[60px] flex items-end">
+						<span class="w-full h-[70%] rounded-2xl bg-[#F8E329]"></span>
 					</div>
-					<div>
-						
-						<h2 class="text-gray-600 dark:text-gray-400 font-bold text-xl xl:text-2xl leading-6 mb-2 text-center">87</h2>
-						<p class="text-gray-800  text-sm xl:text-xl leading-5">Dados 3</p>
-						
+					<div class="bg-gray-300/90 w-[9px] rounded-2xl h-[60px] flex items-end">
+						<span class="w-full h-[90%] rounded-2xl bg-[#F8E329]"></span>
+					</div>
+					<div class="bg-gray-300/90 w-[9px] rounded-2xl h-[60px] flex items-end">
+						<span class="w-full h-[15%] rounded-2xl bg-[#F8E329]"></span>
 					</div>
 				</div>
-				<div class="w-full xl:w-2/3 flex-col md:flex-row justify-center xl:justify-end flex md:pl-6">
-					<div class="flex items-center justify-center xl:justify-start mt-1 md:mt-0 mb-5 md:mb-0">
-						<div class="rounded-full bg-red-400 text-white-600 text-sm px-6 py-2 flex justify-center items-center" style="color:white">Botão 1</div>
-						<div class="ml-5 rounded-full bg-green-200 text-green-500 text-sm px-6 py-2 flex justify-center items-center" style="color:black">Botão 2</div>
+			</div>
+			<div class="flex-grow py-4 bg-white rounded-xl px-[32px]">
+				<div class="flex items-center gap-3">
+					<div
+						class="w-[56px] h-[56px] flex items-center justify-center bg-gradient-to-r from-[#F8E329] to-[#12B886] rounded-full">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+							class="w-[28px] h-[28px] text-white">
+							<path
+								d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z" />
+						</svg>
 					</div>
-						<button class="rounded-full focus:outline-none ml-0 md:ml-5 bg-indigo-700 dark:bg-indigo-600 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-3 md:px-6 py-2 text-sm">Botão 3</button>
+					<div class="flex flex-col">
+						<span class="text-[14px] text-[#858585]">item B</span>
+						<strong class="text-[16px] font-bold">321</strong>
+					</div>
 				</div>
 			</div>
+			<div class="flex-grow py-4 bg-white rounded-xl px-[32px]">
+				<div class="flex items-center gap-3">
+					<div class="w-[56px] h-[56px] flex items-center justify-center bg-[#F4F7FE] rounded-full">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+							class="w-6 h-6 text-[#F8E329]">
+							<path
+								d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75ZM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 0 1-1.875-1.875V8.625ZM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 0 1 3 19.875v-6.75Z" />
+						</svg>
+					</div>
+					<div class="flex flex-col">
+						<span class="text-[14px] text-[#858585]">item C</span>
+						<strong class="text-[24px] font-bold">$350.40</strong>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="w-full rounded-xl px-[44px] py-[30px] bg-white my-[24px] flex items-center justify-between">
+			<div>
+				<h1 class="font-bold text-[32px]">Junte-se à <br> familia Proconph</h1>
+				<p class="font-[500] text-[16px] text-[#858585]">A melhor maneira de surpreender <br> os nossos clientes é a
+					prestação <br> de um serviço de qualidade.</p>
+				<button class="bg-[#F4FE41] flex items-center rounded-xl px-5 py-3 gap-3 mt-[20px]">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+						<path fill-rule="evenodd"
+							d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+							clip-rule="evenodd" />
+					</svg>
+					<span class="text-[16px]">Saber mais</span>
+				</button>
+			</div>
+			<img src="images/LayoutOne/Dashboard_one.png" />
 		</div>
 	</div>
-	<!-- Card code block end -->
-</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
- <p><br></p>
-  <div class="w-full grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 rounded-xl">
-	<div class="bg-white  rounded shadow px-8 py-6 flex items-center rounded-xl">
-		
-		<div class="flex items-center justify-center w-12 h-12 bg-proconph rounded-full" style="color:white">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-			<path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-			</svg>
+	<!-- Chart -->
+	<div class="flex items-center justify-between gap-2">
+		<div class="w-[75%] bg-white px-4 py-5 rounded-xl h-full">
+			<div class="border-b-2 border-gray-300/90">
+				<h1 class="mb-0 text-[18px] font-bold">Analise do Mês</h1>
+			</div>
+			<Chart :chart-data="chartData" :chart-options="chartOptions" type="bar" />
 		</div>
-		<div class="ml-6">
-			<h3 class="mb-1 leading-5 text-gray-800 dark:text-proconph-100 font-bold text-2xl">50</h3>
-			<p class="text-gray-600 dark:text-proconph-400 text-sm tracking-normal font-normal leading-5">Item A</p>
+		<div class="w-[25%] bg-white px-4 py-5 rounded-xl h-full">
+			<div class="border-b-2 border-gray-300/90">
+				<h1 class="mb-0 text-[18px] font-bold">Analise do Mês</h1>
+			</div>
+			<Chart :chart-data="chartDataPie" :chart-options="chartOptionsPie" type="pie" />
 		</div>
-		
 	</div>
-	<div class="bg-white  rounded shadow px-8 py-6 flex items-center rounded-xl">
-		
-		<div class="flex items-center justify-center w-12 h-12 bg-red-400 rounded-full rounded-xl" style="color:white">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-			<path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z" />
-			</svg>
 
+	<!-- Table -->
+	<div class="mt-[23px]">
+		<div class="rounded-t-xl bg-white w-full p-4">
+			<h1 class="mb-0 text-[18px] font-bold">Pedidos</h1>
 		</div>
-		<div class="ml-6">
-			<h3 class="mb-1 leading-5 text-proconph-800 dark:text-proconph-100 font-bold text-2xl">30</h3>
-			<p class="text-gray-600 dark:text-proconph-400 text-sm tracking-normal font-normal leading-5">Item B</p>
-		</div>
-		
-	</div>
-	<div class="bg-white  rounded shadow px-8 py-6 flex items-center rounded-xl">
-		
-		<div class="flex items-center justify-center w-12 h-12 bg-proconph rounded-full" style="color:white">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-			<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
-			</svg>
-		</div>
-		<div class="ml-6">
-			<h3 class="mb-1 leading-5 text-proconph-800 dark:text-proconph-100 font-bold text-2xl">20</h3>
-			<p class="text-gray-600 dark:text-proconph-400 text-sm tracking-normal font-normal leading-5">Item C</p>
-		</div>
-		
-	</div>
-	<div class="bg-white  rounded shadow px-8 py-6 flex items-center rounded-xl">
-		
-		<div class="flex items-center justify-center w-12 h-12 bg-red-400 rounded-full rounded-xl" style="color:white">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-			<path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0" />
-			</svg>
-		</div>
-		<div class="ml-6">
-			<h3 class="mb-1 leading-5 text-proconph-800 dark:text-proconph-100 font-bold text-2xl">70</h3>
-			<p class="text-gray-600 dark:text-proconph-400 text-sm tracking-normal font-normal leading-5">Item D</p>
-		</div>
-		
-	</div>
-</div>
- 
- 
-<div class="mt-10 grid grid-cols-1 gap-6 max-md:grid-cols-1">
-	<div class="bg-white px-4 shadow-md rounded-xl">
-  <div class="mt-4 flex flex-col max-md:px-2 py-1 rounded-lg shadow-sm">
-	<div class="inline-block min-w-full py-2 align-middle">
-	  <h2 class="text-xl font-semibold fontInter text-center py-5"><b>Listagem Padrão</b></h2>
-	  <div class="overflow-hidden overflow-x-visible ring-1 ring-black ring-opacity-5 md:rounded-lg">
-		<table class="min-w-full divide-y divide-gray-300" style="overflow-x: hidden;">
-		  <thead class=" mb-24">
-			<tr class="text-gray-500 font-bold select-none" style="overflow-x: hidden;">  
-			
-			<th scope="col" class="px-4 text-sm cursor-pointer text-center border-r group" >
-			<div class="flex">
-			  <span class="group-hover:text-indigo-800"> Coluna A</span>				
-			</div>
-			 </th>
-			<th  scope="col" class="px-4 text-sm cursor-pointer text-center border-r group">
-			<div class="flex">
-			  <span class="group-hover:text-indigo-800 text-center">  Coluna B</span>				 
-			</div>
-			 </th>
-			<th  scope="col" class="px-4 text-sm cursor-pointer text-center border-r group" >
-			<div class="flex">
-			  <span class="group-hover:text-indigo-800"> Coluna C</span>				 
-			</div>
-			 </th>
-			<th scope="col" class="px-4 text-sm cursor-pointer text-center border-r group" >
-			<div class="flex">
-			  <span class="group-hover:text-indigo-800"> Coluna D</span>				  
-			</div>
-			 </th>
-			<th  scope="col" class="px-4 text-sm cursor-pointer text-center border-r group">
-			<div class="flex">
-			  <span class="group-hover:text-indigo-800">  Coluna E</span>				
-			</div>
-			 </th>			
-			</tr>
-		  </thead>
-		  <tbody class="divide-y divide-gray-200 bg-white">
-			<tr v-for="data in OrdemdeServico" :key="id" class="hover:bg-indigo-50/20 cursor-pointer" :class="{'bg-gray-50 cursor-pointer': (id % 2)}" >
-				   <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
-				<div class="flex items-center">
-				  <div>
-					<div class="font-medium text-gray-900"></div>
-				  </div>
-				</div>
-				 </td>
-				<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
-				<div class="flex items-center">
-				  <div>
-					
-				  </div>
-				</div>
-				 </td>
-				<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
-				<div class="flex items-center">
-				  <div>
-				
-				  </div>
-				</div>
-				 </td>
-			<td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
-				<div class="flex items-center">
-				  <div>
-				
-				  </div>
-				</div>
-				 </td>
-			<td  class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
-				<div class="flex items-center">
-				  <div>
-					
-				  </div>
-				</div>
-				 </td>
-			</tr>
-
-		  </tbody>
+		<table class="min-w-full">
+			<thead class="bg-[#FFF4C0] border-b">
+				<tr>
+					<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+						ID
+					</th>
+					<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+						Nome
+					</th>
+					<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+						Produto
+					</th>
+					<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+						Total
+					</th>
+					<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+						Status
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="bg-white border-b">
+					<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+						#000000
+					</td>
+					<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+						<div class="flex flex-col">
+							<span class="text-[14px] font-[500]">John Bushmill</span>
+							<span class="text-[12px] text-[#667085]">Johnb@mail.com</span>
+						</div>
+					</td>
+					<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+						Landing Page
+					</td>
+					<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+						<span class="text-[12px] text-[#667085]">$121.000</span>
+					</td>
+					<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+						<span
+							class="p-2 bg-[#FFF0EA] text-[red] flex items-center justify-center font-bold rounded-xl">Processando</span>
+					</td>
+				</tr>
+			</tbody>
 		</table>
-	  </div>
 	</div>
-  </div>	
-</div>
-
-
-
-</div>
-<ModalDelete v-model:open="showDeleteModal.show" @del="DeleteFinanceiro(showDeleteModal.id)"/>
 </template>
 
 
@@ -248,63 +161,98 @@ import Dropdown from "primevue/dropdown";
 import Pagination from "../../Components/Pagination.vue";
 import Actions from "../../Components/Tables/Actions.vue";
 import Delete from "../../Components/Modals/Delete.vue";
+import Chart from "../../Components/Chart.vue";
 import { Link } from "@inertiajs/inertia-vue3";
 import { ref, defineProps, watch } from "vue";
 import { Inertia } from "@inertiajs/inertia";
-import { useForm } from "@inertiajs/inertia-vue3";  
+import { useForm } from "@inertiajs/inertia-vue3";
 import { useToast } from "vue-toastification";
 import ModalDelete from "@/Components/Modals/Delete";
 const _ = require("lodash");
 
 const props = defineProps({
-dataTable: Object,
-ContasAVencer: Object,
-Registros: Object,
-OrdemdeServico: Object,
-AlertaError: Object,
+	dataTable: Object,
+	ContasAVencer: Object,
+	Registros: Object,
+	OrdemdeServico: Object,
+	AlertaError: Object,
 });
 
 const showDeleteModal = ref({
-id: null,
-show: false,
+	id: null,
+	show: false,
 });
 
 const AlertaError = props.AlertaError;
 
 const searchBy = ref(getParams("searchBy") || "0");
-const searchBy2 = ref(getParams("searchBy2") || "0"); 
+const searchBy2 = ref(getParams("searchBy2") || "0");
 const statusValue = ref(getParams("byStatus"));
 
 const status = [
-{ label: "Ativo", code: '0' },
-{ label: "Inativo", code: '1' },
+	{ label: "Ativo", code: '0' },
+	{ label: "Inativo", code: '1' },
 ];
 
+const chartDataPie = {
+	labels: ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
+	datasets: [
+		{
+			backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
+			data: [40, 20, 80, 10]
+		}
+	]
+}
 
+const chartOptionsPie = {
+	responsive: true,
+	maintainAspectRatio: false
+}
+
+const chartData = {
+	labels: ['2012', '2013', '2014', '2015', '2016'],
+	datasets: [{
+		label: 'Yellow',
+		data: [12, 19, 3, 5, 2],
+		backgroundColor: 'yellow'
+	}, {
+		label: 'Green',
+		data: [8, 15, 5, 10, 4],
+		backgroundColor: 'green'
+	}]
+}
+
+const chartOptions = {
+	scales: {
+		y: {
+			beginAtZero: true
+		}
+	}
+}
 
 const toast = useToast();
 
-const InputsRequired = { empresa_vinculada: "",id_fixo: "",id_ordem_servico: "",data_prevista: "",data_realizada: "",tipo: "",valor: "",obs: "",created_at: "", };
+const InputsRequired = { empresa_vinculada: "", id_fixo: "", id_ordem_servico: "", data_prevista: "", data_realizada: "", tipo: "", valor: "", obs: "", created_at: "", };
 
 const form = useForm({
 
-empresa_vinculada: "",
+	empresa_vinculada: "",
 
-id_fixo: "",
+	id_fixo: "",
 
-id_ordem_servico: "",
+	id_ordem_servico: "",
 
-data_prevista: "",
+	data_prevista: "",
 
-data_realizada: "",
+	data_realizada: "",
 
-tipo: "",
+	tipo: "",
 
-valor: "",
+	valor: "",
 
-obs: "",
+	obs: "",
 
-created_at: "",
+	created_at: "",
 
 });
 
@@ -318,151 +266,151 @@ const toggleDetalhamento = ref(false);
 
 
 const sortVal = {
-empresa_vinculada: 1,
-id_fixo: 1,
-id_ordem_servico: 1,
-data_prevista: 1,
-data_realizada: 1,
-tipo: 1,
-valor: 1,
-obs: 1,
-created_at: 1,
+	empresa_vinculada: 1,
+	id_fixo: 1,
+	id_ordem_servico: 1,
+	data_prevista: 1,
+	data_realizada: 1,
+	tipo: 1,
+	valor: 1,
+	obs: 1,
+	created_at: 1,
 };
 
 const formColumns = useForm({
-route_of_list: "list.Financeiro",
-columns: {
-empresa_vinculada: validateColumnsVisibility("empresa_vinculada"),
-id_fixo: validateColumnsVisibility("id_fixo"),
-id_ordem_servico: validateColumnsVisibility("id_ordem_servico"),
-data_prevista: validateColumnsVisibility("data_prevista"),
-data_realizada: validateColumnsVisibility("data_realizada"),
-tipo: validateColumnsVisibility("tipo"),
-valor: validateColumnsVisibility("valor"),
-obs: validateColumnsVisibility("obs"),
-created_at: validateColumnsVisibility("created_at"),
-},
+	route_of_list: "list.Financeiro",
+	columns: {
+		empresa_vinculada: validateColumnsVisibility("empresa_vinculada"),
+		id_fixo: validateColumnsVisibility("id_fixo"),
+		id_ordem_servico: validateColumnsVisibility("id_ordem_servico"),
+		data_prevista: validateColumnsVisibility("data_prevista"),
+		data_realizada: validateColumnsVisibility("data_realizada"),
+		tipo: validateColumnsVisibility("tipo"),
+		valor: validateColumnsVisibility("valor"),
+		obs: validateColumnsVisibility("obs"),
+		created_at: validateColumnsVisibility("created_at"),
+	},
 });
 
 function validateColumnsVisibility(column) {
-let columnValue = Inertia.page.props.columnsTable?.[column];
-if (typeof columnValue == "boolean") {
-  return columnValue;
-}
-return true;
+	let columnValue = Inertia.page.props.columnsTable?.[column];
+	if (typeof columnValue == "boolean") {
+		return columnValue;
+	}
+	return true;
 }
 ExibiAlertas();
 
 
 function toggleColumns() {
-formColumns.post(route("toggle.columns.tables"), {
-  preserveState: true,
-});
+	formColumns.post(route("toggle.columns.tables"), {
+		preserveState: true,
+	});
 }
 function sortTable(sort) {
-if (sort) {
-  return 0;
-} else {
-  return 1;
-}
+	if (sort) {
+		return 0;
+	} else {
+		return 1;
+	}
 }
 
 function hasFilterActived() {
-if (
-  getParams("searchBy") !== null ||
-  getParams("searchBy2") !== null ||
-  getParams("limit") !== null ||
-  getParams("orderBy") !== null
-) {
-  return true;
-}
-return false;
+	if (
+		getParams("searchBy") !== null ||
+		getParams("searchBy2") !== null ||
+		getParams("limit") !== null ||
+		getParams("orderBy") !== null
+	) {
+		return true;
+	}
+	return false;
 }
 
 function setModalDeleteVal(id) {
-showDeleteModal.value.id = id;
-showDeleteModal.value.show = true;
+	showDeleteModal.value.id = id;
+	showDeleteModal.value.show = true;
 }
 
 
 function redirectToItem(token) {
-const id = token;
-Inertia.visit(route('form.update.Financeiro', {id: id}, ), {
-  preserveScroll: true,
-  onSuccess: () => toast.info('Você foi redirecionado com sucesso. Após atualizar a informação desejada, você será direcionado ao Financeiro Geral. Para voltar ao Dashboard, selecione a opção no menu lateral em Dashboard.'),
-});
-  }
+	const id = token;
+	Inertia.visit(route('form.update.Financeiro', { id: id },), {
+		preserveScroll: true,
+		onSuccess: () => toast.info('Você foi redirecionado com sucesso. Após atualizar a informação desejada, você será direcionado ao Financeiro Geral. Para voltar ao Dashboard, selecione a opção no menu lateral em Dashboard.'),
+	});
+}
 
 function addFinanceiro() {
 
-for (const formKey in InputsRequired) {
-	if(form[formKey] == '') {
-		toast.info('Todos os campos são obrigatórios!');
-		return false;
+	for (const formKey in InputsRequired) {
+		if (form[formKey] == '') {
+			toast.info('Todos os campos são obrigatórios!');
+			return false;
+		}
 	}
-}
 
 
-form.post(route('storeAjax.Financeiro'), {
-  preserveScroll: true,
-  onError: () => toast.error('Mensagem de erro.'),
-  onSuccess: () => { 
-	form.reset();
-	toast.success("Dados armarzenados com sucesso!");      
-  },
-});
+	form.post(route('storeAjax.Financeiro'), {
+		preserveScroll: true,
+		onError: () => toast.error('Mensagem de erro.'),
+		onSuccess: () => {
+			form.reset();
+			toast.success("Dados armarzenados com sucesso!");
+		},
+	});
 }
 
 
 
 function DeleteFinanceiro(financeiroIndex) {
-const id = financeiroIndex;
-Inertia.post(route('deleteAjax.Financeiro', {id: id}, ), {
-  preserveScroll: true,
-  onSuccess: () => toast.error('Campo apagado com sucesso!'),
-})
+	const id = financeiroIndex;
+	Inertia.post(route('deleteAjax.Financeiro', { id: id },), {
+		preserveScroll: true,
+		onSuccess: () => toast.error('Campo apagado com sucesso!'),
+	})
 }
 
 
 function updateFinanceiro(financeiroIndex) {
-const financeiro =  props.dataTable?.data[financeiroIndex]; 
-const id = financeiro.id;
-Inertia.post(route('updateAjax.Financeiro', {id: id}, ), financeiro, {
-  preserveScroll: true,
-  onSuccess: () => toast.success('Campo editado com sucesso!'),
-})
+	const financeiro = props.dataTable?.data[financeiroIndex];
+	const id = financeiro.id;
+	Inertia.post(route('updateAjax.Financeiro', { id: id },), financeiro, {
+		preserveScroll: true,
+		onSuccess: () => toast.success('Campo editado com sucesso!'),
+	})
 }
 
-function ExibiAlertas(){
-	if(AlertaError == 1){
-		toast.error('Atenção! Usuário não autorizado.'); 
+function ExibiAlertas() {
+	if (AlertaError == 1) {
+		toast.error('Atenção! Usuário não autorizado.');
 		console.log('1');
 	}
 }
 
 function resetFilter() {
-window.history.replaceState(null, null, window.location.pathname);
-recordValue.value = 10;
-searchBy.value = "0";
-searchBy2.value = "0";
-Inertia.reload();
+	window.history.replaceState(null, null, window.location.pathname);
+	recordValue.value = 10;
+	searchBy.value = "0";
+	searchBy2.value = "0";
+	Inertia.reload();
 }
 
 function setParams() {
-let data = {
-  limit: recordValue?.value,
-  searchBy: searchBy.value,
-  searchBy2: searchBy2.value,
-  byStatus: statusValue?.value?.value,
-};
+	let data = {
+		limit: recordValue?.value,
+		searchBy: searchBy.value,
+		searchBy2: searchBy2.value,
+		byStatus: statusValue?.value?.value,
+	};
 
-!orderBy.value?.length ? (data.orderBy = orderBy?.value) : "";
+	!orderBy.value?.length ? (data.orderBy = orderBy?.value) : "";
 
-Inertia.visit("", {
-  preserveState: true,
-  replace: false,
-  data,
-});
+	Inertia.visit("", {
+		preserveState: true,
+		replace: false,
+		data,
+	});
 }
 
 const setParamsWithThrottle = _.throttle(setParams, 600);

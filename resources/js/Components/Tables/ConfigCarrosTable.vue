@@ -1,869 +1,158 @@
 <template>
-  <div class="bg-white px-4 shadow-lg rounded-xl">
-    <p><br /></p>
-    <AchievementCard
-      :Registros="props.Registros"
-      :RotaCadastro="route('form.store.ConfigCarros')"
-      :RotaExcel="route('get.Excel.ConfigCarros')"
-    />
-    <div class="flex justify-center items-center space-x-6 py-2">
-      <!-- primeiro Card -->
-      <div class="bg-white rounded-3xl shadow-2xl w-96 max-h-[250px]">
-        <div class="flex flex-col items-center">
-          <div class="flex space-x-6 mb-3 mt-2">
-            <button
-              @click="toggleFilter = !toggleFilter"
-              class="p-3 hover:bg-secundary flex space-x-2 items-center cursor-pointer hover:text-white rounded-lg"
-              title="Ordenar / Paginação"
-            >
-              <svg
-                class="h-5 w-5"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.9404 22.6501C10.4604 22.6501 9.99039 22.5301 9.55039 22.2901C8.67039 21.8001 8.14039 20.9101 8.14039 19.9101V14.6101C8.14039 14.1101 7.81039 13.3601 7.50039 12.9801L3.76039 9.0201C3.13039 8.3901 2.65039 7.3101 2.65039 6.5001V4.2001C2.65039 2.6001 3.86039 1.3501 5.40039 1.3501H18.6004C20.1204 1.3501 21.3504 2.5801 21.3504 4.1001V6.3001C21.3504 7.3501 20.7204 8.5401 20.1304 9.1301L15.8004 12.9601C15.3804 13.3101 15.0504 14.0801 15.0504 14.7001V19.0001C15.0504 19.8901 14.4904 20.9201 13.7904 21.3401L12.4104 22.2301C11.9604 22.5101 11.4504 22.6501 10.9404 22.6501ZM5.40039 2.8501C4.70039 2.8501 4.15039 3.4401 4.15039 4.2001V6.5001C4.15039 6.8701 4.45039 7.5901 4.83039 7.9701L8.64039 11.9801C9.15039 12.6101 9.65039 13.6601 9.65039 14.6001V19.9001C9.65039 20.5501 10.1004 20.8701 10.2904 20.9701C10.7104 21.2001 11.2204 21.2001 11.6104 20.9601L13.0004 20.0701C13.2804 19.9001 13.5604 19.3601 13.5604 19.0001V14.7001C13.5604 13.6301 14.0804 12.4501 14.8304 11.8201L19.1104 8.0301C19.4504 7.6901 19.8604 6.8801 19.8604 6.2901V4.1001C19.8604 3.4101 19.3004 2.8501 18.6104 2.8501H5.40039Z"
-                  fill="currentColor"
-                />
-                <path
-                  d="M5.99968 10.75C5.85968 10.75 5.72968 10.71 5.59968 10.64C5.24968 10.42 5.13968 9.95002 5.35968 9.60002L10.2897 1.70002C10.5097 1.35002 10.9697 1.24002 11.3197 1.46002C11.6697 1.68002 11.7797 2.14002 11.5597 2.49002L6.62968 10.39C6.48968 10.62 6.24968 10.75 5.99968 10.75Z"
-                  fill="currentColor"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-              &nbsp; Colunas
-            </button>
-            <button
-              @click="FiltroAvancado = !FiltroAvancado"
-              class="ml-4 p-3 hover:bg-secundary flex space-x-2 items-center cursor-pointer hover:text-white rounded-lg"
-              title="Filtros Avançados"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-5 h-5"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-3 w-3"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-              &nbsp; Filtros Avançados
-            </button>
-          </div>
+  <div class="h-screen">
+    <div class="flex items-center justify-between">
+      <div>
+        <span class="font-semibold text-[14px] text-[#858585] mb-0">Bem-vind de volta, {{ $page.props.user?.name
+          }}!</span>
+        <h1 class="font-bold text-[20px]">Listagem</h1>
+      </div>
+      <div class="flex gap-3">
+        <button
+          class="w-[142px] bg-[#F4FE41] text-[16px] font-semibold rounded-[12px] flex items-center justify-center h-[46px] gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path fill-rule="evenodd"
+              d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+              clip-rule="evenodd" />
+          </svg>
+          <span>Cadastro</span>
+        </button>
+        <button
+          class="w-[142px] bg-[#F4FE41] text-[16px] font-semibold rounded-[12px] flex items-center justify-center h-[46px] gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <path
+              d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+            <path fill-rule="evenodd"
+              d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z"
+              clip-rule="evenodd" />
+          </svg>
+          <span>Calendário</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mt-[24px] flex gap-3">
+      <div class="flex-grow bg-white rounded-2xl flex gap-2 p-3 items-center">
+        <div class="bg-[#F4F7FE] rounded-full w-[50px] h-[50px] flex items-center justify-center">
+          <span class="text-[#F8E329] text-[20px] font-bold">02</span>
+        </div>
+        <div class="flex flex-col">
+          <p class="mb-0 text-[16px] font-bold text-gray-400/90">Ativos e Inativos</p>
+          <h1 class="text-[18px] font-bold">Total</h1>
+        </div>
+      </div>
+      <div class="flex-grow bg-white rounded-2xl flex gap-2 p-3 items-center">
+        <div class="bg-[#F4F7FE] rounded-full w-[50px] h-[50px] flex items-center justify-center">
+          <span class="text-[#F8E329] text-[20px] font-bold">02</span>
+        </div>
+        <div class="flex flex-col">
+          <p class="mb-0 text-[16px] font-bold text-gray-400/90">Ativos</p>
+          <h1 class="text-[18px] font-bold">Total</h1>
+        </div>
+      </div>
+      <div class="flex-grow bg-white rounded-2xl flex gap-2 p-3 items-center">
+        <div class="bg-[#F4F7FE] rounded-full w-[50px] h-[50px] flex items-center justify-center">
+          <span class="text-[#F8E329] text-[20px] font-bold">00</span>
+        </div>
+        <div class="flex flex-col">
+          <p class="mb-0 text-[16px] font-bold text-gray-400/90">Inativos</p>
+          <h1 class="text-[18px] font-bold">Total</h1>
+        </div>
+      </div>
+      <div class="flex-grow bg-white rounded-2xl flex gap-2 p-3 items-center">
+        <div class="bg-[#F4F7FE] rounded-full w-[50px] h-[50px] flex items-center justify-center">
+          <span class="text-[#F8E329] text-[20px] font-bold">0/2</span>
+        </div>
+        <div class="flex flex-col">
+          <p class="mb-0 text-[16px] font-bold text-gray-400/90">Este Mês</p>
+          <h1 class="text-[18px] font-bold">Total</h1>
         </div>
       </div>
     </div>
-    <p><br /></p>
-    <Toolbar>
-      <template #start> </template>
-      <template #end>
-        <SlideUpDown v-model="DeleteSelect" :duration="300">
-          <button
-            @click="openDelSelect = true"
-            class="mt-4 ml-4 p-4 py-3 flex shadow-md bg-red-400 flex space-x-2 items-center cursor-pointer hover:text-white rounded-lg"
-            title="Excluir Selecionados"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-5 h-5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </SlideUpDown>
-        <button
-          @click="DeleteSelect = !DeleteSelect"
-          class="mt-4 ml-4 p-4 py-3 flex shadow-md hover:bg-primary flex space-x-2 items-center cursor-pointer hover:text-white rounded-lg"
-          title="Excluir Vários"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-5 h-5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m6 4.125l2.25 2.25m0 0l2.25 2.25M12 13.875l2.25-2.25M12 13.875l-2.25 2.25M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
-            />
-          </svg>
-        </button>
-
-        <button
-          @click="openDelTodos = true"
-          class="mt-4 ml-4 p-4 py-3 flex shadow-md hover:bg-red-600 flex space-x-2 items-center cursor-pointer hover:text-white rounded-lg"
-          title="Excluir Todos"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-5 h-5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
-            />
-          </svg>
-        </button>
-
-        <button
-          @click="openRestaurarTodos = true"
-          class="mt-4 ml-4 p-4 py-3 flex shadow-md hover:bg-green-400 flex space-x-2 items-center cursor-pointer hover:text-white rounded-lg"
-          title="Restaurar Todos Dados Excluídos"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-5 h-5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
-            />
-          </svg>
-        </button>
-      </template>
-    </Toolbar>
-
-    <SlideUpDown v-model="FiltroAvancado" :duration="300">
-      <form @submit.prevent="submit">
-        <div class="flex ml-4 grid grid-cols-8 gap-8 max-md:grid-cols-1">
-          <div class="col-span-8">
-            <h3><b>Filtros Avançados</b></h3>
-            <br />
-            <hr />
-          </div>
-
-          <div>
-            <span class="p-float-label">
-              <InputText
-                v-model="form2.nome"
-                id="nome"
-                type="text"
-                class="w-full"
-                required
-              />
-              <label for="nome" class="text-sm">Nome</label>
-            </span>
-          </div>
-          <div>
-            <span class="p-float-label">
-              <InputText
-                v-model="form2.placa"
-                id="placa"
-                type="text"
-                class="w-full"
-                required
-              />
-              <label for="placa" class="text-sm">Placa</label>
-            </span>
-          </div>
-          <div>
-            <span class="p-float-label">
-              <InputText
-                v-model="form2.modelo"
-                id="modelo"
-                type="text"
-                class="w-full"
-                required
-              />
-              <label for="modelo" class="text-sm">Modelo</label>
-            </span>
-          </div>
-          <div>
-            <span class="p-float-label">
-              <InputText
-                v-model="form2.ano"
-                id="ano"
-                type="text"
-                class="w-full"
-                required
-              />
-              <label for="ano" class="text-sm">Ano</label>
-            </span>
-          </div>
-          <div>
-            <span class="p-float-label">
-              <InputText
-                v-model="form2.cor"
-                id="cor"
-                type="text"
-                class="w-full"
-                required
-              />
-              <label for="cor" class="text-sm">Cor</label>
-            </span>
-          </div>
-          <div>
-            <span class="p-float-label">
-              <InputText
-                v-model="form2.valor_compra"
-                id="valor_compra"
-                type="text"
-                class="w-full"
-                required
-              />
-              <label for="valor_compra" class="text-sm">Valor da Compra</label>
-            </span>
-          </div>
-          <div>
-            <span class="p-float-label">
-              <InputText
-                v-model="form2.observacao"
-                id="observacao"
-                type="text"
-                class="w-full"
-                required
-              />
-              <label for="observacao" class="text-sm">Observação</label>
-            </span>
-          </div>
-          <div>
-            <span class="p-float-label">
-              <Dropdown
-                class="w-full"
-                v-model="form2.status"
-                :options="statusOption"
-                optionLabel="name"
-                dataKey="value"
-                required
-              />
-              <label for="status" class="text-sm">Status</label>
-            </span>
-          </div>
-
-          <div>
-            <span class="p-float-label">
-              <Checkbox
-                inputId="binary"
-                v-model="form2.limparFiltros"
-                :binary="true"
-                style="margin: 2%"
-              />
-              <label for="status" class="text-sm" style="margin-left: 5%"
-                >Deseja Resetar o Filtro Aplicado?</label
-              >
-            </span>
-          </div>
-        </div>
-
-        <div class="flex ml-4 space-x-5 mt-8">
-          <button
-            @click="FiltroAvancadoAplica"
-            class="p-2 flex rounded-md bg-primary text-white px-6 text-sm font-medium items-center"
-          >
-            Aplicar
-          </button>
-        </div>
-      </form>
-    </SlideUpDown>
-
-    <SlideUpDown v-model="toggleFilter" :duration="300">
-      <div class="flex mb-4 max-md:flex-col-reverse items-center">
-        <Limit
-          class="p-field p-col-12 p-md-4 mt-6 max-md:w-full max-md:mb-5 flex items-center space-x-3 text-xs text-gray-500"
-        >
-          <span>Mostrar</span>
-          <select
-            name=""
-            @change="setParams"
-            v-model="recordValue"
-            id=""
-            class="rounded-md focus:ring-primary h-8 text-xs w-20"
-          >
-            <option value="10">10</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-            <option value="500">500</option>
-          </select>
-          <span>registros</span>
-        </Limit>
-      </div>
-      <hr class="my-4" />
-      <div class="text-sm text-gray-500 flex items-center">
-        <div class="space-x-6 flex ml-4 grid grid-cols-6 gap-6 max-md:grid-cols-1">
-          <span class="font-semibold">Colunas Visíveis:</span>
-
-          <div class="flex items-center space-x-2">
-            <Checkbox
-              @change="toggleColumns"
-              :binary="true"
-              v-model="formColumns['columns']['nome']"
-            />
-            <span>Nome</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <Checkbox
-              @change="toggleColumns"
-              :binary="true"
-              v-model="formColumns['columns']['placa']"
-            />
-            <span>Placa</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <Checkbox
-              @change="toggleColumns"
-              :binary="true"
-              v-model="formColumns['columns']['modelo']"
-            />
-            <span>Modelo</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <Checkbox
-              @change="toggleColumns"
-              :binary="true"
-              v-model="formColumns['columns']['ano']"
-            />
-            <span>Ano</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <Checkbox
-              @change="toggleColumns"
-              :binary="true"
-              v-model="formColumns['columns']['cor']"
-            />
-            <span>Cor</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <Checkbox
-              @change="toggleColumns"
-              :binary="true"
-              v-model="formColumns['columns']['valor_compra']"
-            />
-            <span>Valor da Compra</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <Checkbox
-              @change="toggleColumns"
-              :binary="true"
-              v-model="formColumns['columns']['observacao']"
-            />
-            <span>Observação</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <Checkbox
-              @change="toggleColumns"
-              :binary="true"
-              v-model="formColumns['columns']['status']"
-            />
-            <span>Status</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <Checkbox
-              @change="toggleColumns"
-              :binary="true"
-              v-model="formColumns['columns']['created_at']"
-            />
-            <span>Data De Cadastro</span>
-          </div>
-        </div>
-      </div>
-    </SlideUpDown>
-
-    <p>
-      <br />
-    </p>
 
     <div class="mt-4 flex flex-col max-md:px-2 py-1 rounded-lg shadow-sm">
-      <div class="inline-block min-w-full py-2 align-middle">
-        <h2 class="text-xl font-semibold fontInter text-center py-5"><b>Carros</b></h2>
-        <div
-          class="overflow-hidden overflow-x-visible ring-1 ring-black ring-opacity-5 md:rounded-lg"
-        >
-          <table class="min-w-full divide-y divide-gray-300">
-            <thead class="mb-24">
-              <tr class="text-gray-500 font-bold select-none" @click="setParams">
-                <th
-                  scope="col"
-                  class="px-4 text-sm cursor-pointer text-center border-r group"
-                  style="width: 2%"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m6 4.125l2.25 2.25m0 0l2.25 2.25M12 13.875l2.25-2.25M12 13.875l-2.25 2.25M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
-                    />
-                  </svg>
+      <div class="">
+        <div class="overflow-hidden overflow-x-visible">
+          <div class="w-full bg-white p-4 flex items-center justify-between rounded-2xl">
+            <h1 class="font-semibold text-[18px]">Pedidos</h1>
+            <div class="flex items-center gap-3">
+              <button class="border-2 border-gray-200/90 rounded-2xl p-2 flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    d="M18.75 12.75h1.5a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5ZM12 6a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 12 6ZM12 18a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 12 18ZM3.75 6.75h1.5a.75.75 0 1 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5ZM5.25 18.75h-1.5a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 0 1.5ZM3 12a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 3 12ZM9 3.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM12.75 12a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0ZM9 15.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" />
+                </svg>
+                <span class="text-[14px]">Filtros Avançados</span>
+              </button>
+              <button
+                class="w-[142px] bg-[#F4FE41] text-[16px] font-semibold rounded-[12px] flex items-center justify-center h-[46px] gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path
+                    d="M11.47 1.72a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1-1.06 1.06l-1.72-1.72V7.5h-1.5V4.06L9.53 5.78a.75.75 0 0 1-1.06-1.06l3-3ZM11.25 7.5V15a.75.75 0 0 0 1.5 0V7.5h3.75a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h3.75Z" />
+                </svg>
+                <span class="text-[14px]">Exportar</span>
+              </button>
+            </div>
+          </div>
+          <table class="min-w-full">
+            <thead class="bg-[#FFF4C0] border-b">
+              <tr>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                  ID
                 </th>
-
-                <th
-                  v-if="formColumns.columns.nome"
-                  scope="col"
-                  class="px-4 text-sm cursor-pointer text-center border-r group"
-                  @click="
-                    orderBy = {
-                      column: 'nome',
-                      sorting: sortTable(sortVal.nome)
-                        ? (sortVal.nome = 1)
-                        : (sortVal.nome = 0),
-                    }
-                  "
-                >
-                  <div class="flex">
-                    <span class="group-hover:text-indigo-800">Nome</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 ml-auto group-hover:text-indigo-800"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"
-                      />
-                    </svg>
-                  </div>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                  Nome
                 </th>
-                <th
-                  v-if="formColumns.columns.placa"
-                  scope="col"
-                  class="px-4 text-sm cursor-pointer text-center border-r group"
-                  @click="
-                    orderBy = {
-                      column: 'placa',
-                      sorting: sortTable(sortVal.placa)
-                        ? (sortVal.placa = 1)
-                        : (sortVal.placa = 0),
-                    }
-                  "
-                >
-                  <div class="flex">
-                    <span class="group-hover:text-indigo-800">Placa</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 ml-auto group-hover:text-indigo-800"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"
-                      />
-                    </svg>
-                  </div>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                  Produto
                 </th>
-                <th
-                  v-if="formColumns.columns.modelo"
-                  scope="col"
-                  class="px-4 text-sm cursor-pointer text-center border-r group"
-                  @click="
-                    orderBy = {
-                      column: 'modelo',
-                      sorting: sortTable(sortVal.modelo)
-                        ? (sortVal.modelo = 1)
-                        : (sortVal.modelo = 0),
-                    }
-                  "
-                >
-                  <div class="flex">
-                    <span class="group-hover:text-indigo-800">Modelo</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 ml-auto group-hover:text-indigo-800"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"
-                      />
-                    </svg>
-                  </div>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                  Total
                 </th>
-                <th
-                  v-if="formColumns.columns.ano"
-                  scope="col"
-                  class="px-4 text-sm cursor-pointer text-center border-r group"
-                  @click="
-                    orderBy = {
-                      column: 'ano',
-                      sorting: sortTable(sortVal.ano)
-                        ? (sortVal.ano = 1)
-                        : (sortVal.ano = 0),
-                    }
-                  "
-                >
-                  <div class="flex">
-                    <span class="group-hover:text-indigo-800">Ano</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 ml-auto group-hover:text-indigo-800"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"
-                      />
-                    </svg>
-                  </div>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                  Status
                 </th>
-                <th
-                  v-if="formColumns.columns.cor"
-                  scope="col"
-                  class="px-4 text-sm cursor-pointer text-center border-r group"
-                  @click="
-                    orderBy = {
-                      column: 'cor',
-                      sorting: sortTable(sortVal.cor)
-                        ? (sortVal.cor = 1)
-                        : (sortVal.cor = 0),
-                    }
-                  "
-                >
-                  <div class="flex">
-                    <span class="group-hover:text-indigo-800">Cor</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 ml-auto group-hover:text-indigo-800"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"
-                      />
-                    </svg>
-                  </div>
-                </th>
-                <th
-                  v-if="formColumns.columns.valor_compra"
-                  scope="col"
-                  class="px-4 text-sm cursor-pointer text-center border-r group"
-                  @click="
-                    orderBy = {
-                      column: 'valor_compra',
-                      sorting: sortTable(sortVal.valor_compra)
-                        ? (sortVal.valor_compra = 1)
-                        : (sortVal.valor_compra = 0),
-                    }
-                  "
-                >
-                  <div class="flex">
-                    <span class="group-hover:text-indigo-800">Valor da Compra</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 ml-auto group-hover:text-indigo-800"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"
-                      />
-                    </svg>
-                  </div>
-                </th>
-                <th
-                  v-if="formColumns.columns.observacao"
-                  scope="col"
-                  class="px-4 text-sm cursor-pointer text-center border-r group"
-                  @click="
-                    orderBy = {
-                      column: 'observacao',
-                      sorting: sortTable(sortVal.observacao)
-                        ? (sortVal.observacao = 1)
-                        : (sortVal.observacao = 0),
-                    }
-                  "
-                >
-                  <div class="flex">
-                    <span class="group-hover:text-indigo-800">Observação</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 ml-auto group-hover:text-indigo-800"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"
-                      />
-                    </svg>
-                  </div>
-                </th>
-                <th
-                  v-if="formColumns.columns.status"
-                  scope="col"
-                  class="px-4 text-sm cursor-pointer text-center border-r group"
-                  @click="
-                    orderBy = {
-                      column: 'status',
-                      sorting: sortTable(sortVal.status)
-                        ? (sortVal.status = 1)
-                        : (sortVal.status = 0),
-                    }
-                  "
-                >
-                  <div class="flex">
-                    <span class="group-hover:text-indigo-800">Status</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 ml-auto group-hover:text-indigo-800"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"
-                      />
-                    </svg>
-                  </div>
-                </th>
-                <th
-                  v-if="formColumns.columns.created_at"
-                  scope="col"
-                  class="px-4 text-sm cursor-pointer text-center border-r group"
-                  @click="
-                    orderBy = {
-                      column: 'created_at',
-                      sorting: sortTable(sortVal.created_at)
-                        ? (sortVal.created_at = 1)
-                        : (sortVal.created_at = 0),
-                    }
-                  "
-                >
-                  <div class="flex">
-                    <span class="group-hover:text-indigo-800">Data De Cadastro</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 ml-auto group-hover:text-indigo-800"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"
-                      />
-                    </svg>
-                  </div>
-                </th>
-
-                <th
-                  scope="col"
-                  class="px-3 py-3.5 text-center text-sm sm:pr-12"
-                  style="width: 5%"
-                  v-if="
-                    $page.props.userPermissions.includes('edit.ConfigCarros') ||
-                    $page.props.userPermissions.includes('delete.ConfigCarros')
-                  "
-                >
-                  Ações
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                  Ação
                 </th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-gray-200 bg-white">
-              <tr
-                v-for="(data, key) in dataTable?.data"
-                :key="key"
-                class="hover:bg-indigo-50/20"
-                :class="{ 'bg-gray-50': key % 2 }"
-              >
-                <td class="whitespace-nowrap py-6 pl-4 pr-3 text-sm sm:pl-6">
-                  <div class="flex items-center">
-                    <div>
-                      <SlideUpDown v-model="DeleteSelect" :duration="300">
-                        <Checkbox
-                          inputId="id"
-                          name="selected"
-                          :value="data?.token"
-                          v-model="selected"
-                        />
-                      </SlideUpDown>
-                    </div>
+            <tbody>
+              <tr class="bg-white border-b">
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap flex gap-3 items-center">
+                  <input type="checkbox" />
+                  <span>#000000</span>
+                </td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                  <div class="flex flex-col">
+                    <span class="text-[14px] font-[500]">John Bushmill</span>
+                    <span class="text-[12px] text-[#667085]">Johnb@mail.com</span>
                   </div>
                 </td>
-
-                <td
-                  v-if="formColumns?.columns?.nome"
-                  class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="font-medium text-gray-900">{{ data?.nome }}</div>
-                    </div>
-                  </div>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                  Landing Page
                 </td>
-                <td
-                  v-if="formColumns?.columns?.placa"
-                  class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="font-medium text-gray-900">{{ data?.placa }}</div>
-                    </div>
-                  </div>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                  <span class="text-[12px] text-[#667085]">$121.000</span>
                 </td>
-                <td
-                  v-if="formColumns?.columns?.modelo"
-                  class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="font-medium text-gray-900">{{ data?.modelo }}</div>
-                    </div>
-                  </div>
-                </td>
-                <td
-                  v-if="formColumns?.columns?.ano"
-                  class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="font-medium text-gray-900">{{ data?.ano }}</div>
-                    </div>
-                  </div>
-                </td>
-                <td
-                  v-if="formColumns?.columns?.cor"
-                  class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="font-medium text-gray-900">{{ data?.cor }}</div>
-                    </div>
-                  </div>
-                </td>
-                <td
-                  v-if="formColumns?.columns?.valor_compra"
-                  class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="font-medium text-gray-900">
-                        {{ data?.valor_compra }}
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td
-                  v-if="formColumns?.columns?.observacao"
-                  class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="font-medium text-gray-900">{{ data?.observacao }}</div>
-                    </div>
-                  </div>
-                </td>
-                <td
-                  v-if="formColumns?.columns?.status"
-                  class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center"
-                >
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                   <span
-                    class="inline-flex rounded-full bg-green-100 text-center px-4 text-xs font-semibold leading-5 text-green-800"
-                    v-if="data?.status == '0'"
-                    >Ativo</span
-                  >
-                  <span
-                    class="inline-flex rounded-full bg-red-100 text-center px-4 text-xs font-semibold leading-5 text-red-800"
-                    v-if="data?.status == '1'"
-                    >Inativo</span
-                  >
+                    class="p-2 bg-[#FFF0EA] text-[red] flex items-center justify-center font-bold rounded-xl">Processando</span>
                 </td>
-                <td
-                  v-if="formColumns?.columns?.created_at"
-                  class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6"
-                >
-                  <div class="flex items-center">
-                    <div>
-                      <div class="font-medium text-gray-900">{{ data?.data_final }}</div>
-                    </div>
-                  </div>
-                </td>
-
-                <td
-                  class="whitespace-nowrap py-4 pl-3 pr-4 text-center text-sm font-medium sm:pr-6"
-                  style="width: 5%"
-                  v-if="
-                    $page.props.userPermissions.includes('edit.ConfigCarros') ||
-                    $page.props.userPermissions.includes('delete.ConfigCarros')
-                  "
-                >
-                  <Actions
-                    :routeDel="route('delete.ConfigCarros', { id: data?.token })"
-                    :routeUpdate="route('form.update.ConfigCarros', { id: data?.token })"
-                  />
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap flex items-center gap-3 justify-end">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-gray-300/90">
+                      <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                      <path fill-rule="evenodd"
+                        d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 0 1 0-1.113ZM17.25 12a5.25 5.25 0 1 1-10.5 0 5.25 5.25 0 0 1 10.5 0Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-gray-300/90">
+                      <path fill-rule="evenodd"
+                        d="M16.5 4.478v.227a48.816 48.816 0 0 1 3.878.512.75.75 0 1 1-.256 1.478l-.209-.035-1.005 13.07a3 3 0 0 1-2.991 2.77H8.084a3 3 0 0 1-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 0 1-.256-1.478A48.567 48.567 0 0 1 7.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 0 1 3.369 0c1.603.051 2.815 1.387 2.815 2.951Zm-6.136-1.452a51.196 51.196 0 0 1 3.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 0 0-6 0v-.113c0-.794.609-1.428 1.364-1.452Zm-.355 5.945a.75.75 0 1 0-1.5.058l.347 9a.75.75 0 1 0 1.499-.058l-.346-9Zm5.48.058a.75.75 0 1 0-1.498-.058l-.347 9a.75.75 0 0 0 1.5.058l.345-9Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </button>
                 </td>
               </tr>
             </tbody>
@@ -871,11 +160,7 @@
         </div>
       </div>
     </div>
-    <Pagination
-      :links="dataTable"
-      :orderBy="props.Filtros.orderBy"
-      :limit="props.Filtros.limit"
-    />
+    <Pagination :links="dataTable" :orderBy="props.Filtros.orderBy" :limit="props.Filtros.limit" />
     <Delete v-model:open="openDelTodos" @del="delTodos" />
     <Delete v-model:open="openDelSelect" @del="del" />
     <Restaurar v-model:open="openRestaurarTodos" @del="RestaurarTodos" />

@@ -3,7 +3,9 @@
 @import 'tailwindcss/utilities';
 
 body{
-    zoom: 0.78;
+    /* zoom: 0.78; */
+    padding: 0;
+    margin: 0;
 }
 
 /* Works on Firefox */
