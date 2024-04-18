@@ -1,8 +1,8 @@
 <template>
 
-  <div class="relative flex gap-3 justify-between">
-    <SideBar class="w-[20%] 2xl:w-[15%]">
-      <div class="bg-white shadow-md h-screen w-full z-50 overflow-y-auto">
+  <div class="relative flex gap-3 justify-between bg-[#FFFBE8]">
+    <SideBar class="w-[20%] 2xl:w-[15%] flex-grow bg-white shadow-md">
+      <div class="bg-white w-full z-50 overflow-y-auto">
         <div class="p-5 flex h-16 mb-[50px] mt-[25px]">
           <img class="mx-auto w-[150px]" src="/images/LayoutOne/LogoLayout_one.png" alt="" srcset="">
         </div>
@@ -21,8 +21,7 @@
             <span class="font-bold text-[16px] mt-[12px]" v-show="!toggleTextMenu">Dashboard</span>
           </li>
           </Link>
-          <Link as="button" class="w-full" :href="route('list.ConfigCarros')"
-            v-if="$page.props.userPermissions.includes('list.ConfigCarros')" @click="changeRoute('listagem')">
+          <Link as="button" class="w-full" :href="route('list.products')" @click="changeRoute('listagem')">
           <li :class="currentRoute === 'listagem' ? 'bg-[#F4FE41]' : ''"
             class="flex flex-col py-5 justify-center rounded-xl w-full font-semibold items-center text-[14.5px]">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -33,14 +32,14 @@
             <span class="font-bold text-[16px] mt-[12px]" v-show="!toggleTextMenu">Listagem</span>
           </li>
           </Link>
-          <Link as="button" class="w-full" :href="route('list.ConfigCarros')"
-            v-if="$page.props.userPermissions.includes('list.ConfigCarros')" @click="changeRoute('cadastrar')">
+          <Link as="button" class="w-full" :href="route('list.create')" @click="changeRoute('cadastrar')">
           <li :class="currentRoute === 'cadastrar' ? 'bg-[#F4FE41]' : ''"
             class="flex flex-col py-5 justify-center rounded-xl w-full font-semibold items-center text-[14.5px]">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-5 h-5">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path
+                d="M21.731 2.269a2.625 2.625 0 0 0-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 0 0 0-3.712ZM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 0 0-1.32 2.214l-.8 2.685a.75.75 0 0 0 .933.933l2.685-.8a5.25 5.25 0 0 0 2.214-1.32l8.4-8.4Z" />
+              <path
+                d="M5.25 5.25a3 3 0 0 0-3 3v10.5a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3V13.5a.75.75 0 0 0-1.5 0v5.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5V8.25a1.5 1.5 0 0 1 1.5-1.5h5.25a.75.75 0 0 0 0-1.5H5.25Z" />
             </svg>
             <span class="font-bold text-[16px] mt-[12px]" v-show="!toggleTextMenu">Cadastrar</span>
           </li>
@@ -48,11 +47,11 @@
         </nav>
       </div>
     </SideBar>
-    <div class=" p-6 mt-16 w-[60%] 2xl:w-[70%]">
+    <div class=" p-[12px] w-[60%] 2xl:w-[70%]">
       <slot />
     </div>
-    <SideBarRight class="w-[20%] 2xl:w-[15%]">
-      <div class="bg-white shadow-md h-screen w-full z-50 overflow-y-auto">
+    <SideBarRight class="w-[20%] shadow-md 2xl:w-[15%] bg-white">
+      <div class="bg-white w-full z-50 overflow-y-auto">
         <nav class="mt-6 list-none px-5">
           <div class="flex items-center justify-center">
             <div class="border-[4px] rounded-full border-[#F8E3AA] overflow-hidden relative">
@@ -116,22 +115,24 @@
               </a>
             </li>
             <li>
-              <Link class="px-3 py-5 bg-[#FFFBE8] flex items-center justify-between rounded-xl" href="/logout" method="post">
-                <div class="flex gap-3 items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-[#11E86F]">
-                    <path
-                      d="M11.47 1.72a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1-1.06 1.06l-1.72-1.72V7.5h-1.5V4.06L9.53 5.78a.75.75 0 0 1-1.06-1.06l3-3ZM11.25 7.5V15a.75.75 0 0 0 1.5 0V7.5h3.75a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h3.75Z" />
-                  </svg>
-                  <div>
-                    <span class="font-bold text-[18px]">Sair da conta</span>
-                    <p class="text-[14px] #868E96">Ir à página</p>
-                  </div>
-                </div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                  <path fill-rule="evenodd"
-                    d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                    clip-rule="evenodd" />
+              <Link class="px-3 py-5 bg-[#FFFBE8] flex items-center justify-between rounded-xl" href="/logout"
+                method="post">
+              <div class="flex gap-3 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                  class="w-6 h-6 text-[#11E86F]">
+                  <path
+                    d="M11.47 1.72a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1-1.06 1.06l-1.72-1.72V7.5h-1.5V4.06L9.53 5.78a.75.75 0 0 1-1.06-1.06l3-3ZM11.25 7.5V15a.75.75 0 0 0 1.5 0V7.5h3.75a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3v-9a3 3 0 0 1 3-3h3.75Z" />
                 </svg>
+                <div>
+                  <span class="font-bold text-[18px]">Sair da conta</span>
+                  <p class="text-[14px] #868E96">Ir à página</p>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd"
+                  d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                  clip-rule="evenodd" />
+              </svg>
               </Link>
             </li>
           </ul>

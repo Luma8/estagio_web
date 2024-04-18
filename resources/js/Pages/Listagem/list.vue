@@ -75,13 +75,74 @@
           <div class="w-full bg-white p-4 flex items-center justify-between rounded-t-2xl">
             <h1 class="font-semibold text-[18px]">Pedidos</h1>
             <div class="flex items-center gap-3">
-              <button class="border-2 border-gray-200/90 rounded-2xl p-2 flex items-center justify-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                  <path
-                    d="M18.75 12.75h1.5a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5ZM12 6a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 12 6ZM12 18a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 12 18ZM3.75 6.75h1.5a.75.75 0 1 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5ZM5.25 18.75h-1.5a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 0 1.5ZM3 12a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 3 12ZM9 3.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM12.75 12a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0ZM9 15.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" />
-                </svg>
-                <span class="text-[14px]">Filtros Avançados</span>
-              </button>
+              <div>
+                <button class="border-2 border-gray-200/90 rounded-2xl p-2 flex items-center justify-center gap-2" @click="showFitler">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path
+                      d="M18.75 12.75h1.5a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5ZM12 6a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 12 6ZM12 18a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 12 18ZM3.75 6.75h1.5a.75.75 0 1 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5ZM5.25 18.75h-1.5a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 0 1.5ZM3 12a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 3 12ZM9 3.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM12.75 12a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0ZM9 15.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" />
+                  </svg>
+                  <span class="text-[14px]">Filtros Avançados</span>
+                </button>
+                <div class="w-[406px] rounded-xl p-3 absolute bg-white" v-if="hasFilterClicked">
+                  <h1 class="border-b-2 border-gray-300/90">Colunas</h1>
+                  <div class="my-4 flex flex-col gap-y-3">
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>ID</label>
+                    </div>
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>Nome</label>
+                    </div>
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>Produto</label>
+                    </div>
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>Total</label>
+                    </div>
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>Endereço</label>
+                    </div>
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>Status</label>
+                    </div>
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>Imposto</label>
+                    </div>
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>Ação</label>
+                    </div>
+                  </div>
+                  <h1 class="">Filtro</h1>
+                  <div class="my-3 flex flex-col gap-y-3 border-b-2 border-t-2 border-gray-200/90 py-4">
+                    <button class="w-full flex justify-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd"
+                          d="M11.47 2.47a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1-1.06 1.06l-2.47-2.47V21a.75.75 0 0 1-1.5 0V4.81L8.78 7.28a.75.75 0 0 1-1.06-1.06l3.75-3.75Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      <span>Ordenar A-Z</span>
+                    </button>
+                    <button class="w-full flex justify-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd"
+                          d="M12 2.25a.75.75 0 0 1 .75.75v16.19l2.47-2.47a.75.75 0 1 1 1.06 1.06l-3.75 3.75a.75.75 0 0 1-1.06 0l-3.75-3.75a.75.75 0 1 1 1.06-1.06l2.47 2.47V3a.75.75 0 0 1 .75-.75Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      <span>Ordenar Z-A</span>
+                    </button>
+                  </div>
+                  <button class="w-full py-3 rounded-xl bg-[#F4FE41]">
+                    <span class="font-bold text-[14px]">Aplicar</span>
+                  </button>
+                </div>
+              </div>
               <button
                 class="w-[142px] bg-[#F4FE41] text-[16px] font-semibold rounded-[12px] flex items-center justify-center h-[46px] gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -176,8 +237,7 @@
                     clip-rule="evenodd" />
                 </svg>
               </button>
-              <button
-                class="w-[32px] h-[32px] flex items-center justify-center rounded-[5px] bg-[#F8E329] text-white">
+              <button class="w-[32px] h-[32px] flex items-center justify-center rounded-[5px] bg-[#F8E329] text-white">
                 <span>1</span>
               </button>
               <button
@@ -247,6 +307,12 @@ const props = defineProps({
   Filtros: Object,
   Registros: Object,
 });
+
+const hasFilterClicked = ref(false);
+
+const showFitler = () => {
+  hasFilterClicked.value = !hasFilterClicked.value;
+}
 
 const showDeleteModal = ref([]);
 const openDelSelect = ref(false);
