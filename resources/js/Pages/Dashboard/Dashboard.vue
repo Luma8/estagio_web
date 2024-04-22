@@ -1,153 +1,212 @@
 <template>
 	<div class="items-center justify-center w-full">
-		<div class="flex items-center justify-between">
-			<div class="flex flex-col">
-				<span class="font-semibold text-[14px] text-[#858585] mb-0">Bem-vind de volta, {{ $page.props.user?.name
-					}}!</span>
-				<h1 class="font-bold text-[20px] mb-0">Dashboard</h1>
-			</div>
-		</div>
-		<div class="flex gap-3 mt-[24px]">
-			<div class="flex-grow flex justify-between items-center py-4 px-[32px] bg-white rounded-xl">
+		<div class="w-full flex justify-between items-center bg-white rounded-xl p-5">
+			<div class="flex items-center gap-4">
+				<div class="w-[76px] h-[76px] flex items-center justify-center bg-[#E6FCF5] rounded-full">
+					<span class="text-[#087F5B] font-bold text-[16px]">EA</span>
+				</div>
 				<div class="flex flex-col">
-					<span class="text-[14px] text-[#858585]">item A</span>
-					<strong class="text-[24px] font-bold">$682.5</strong>
-				</div>
-				<div class="flex gap-x-3">
-					<div class="bg-gray-300/90 w-[9px] rounded-2xl h-[60px] flex items-end">
-						<span class="w-full h-[80%] rounded-2xl bg-[#F8E329]"></span>
-					</div>
-					<div class="bg-gray-300/90 w-[9px] rounded-2xl h-[60px] flex items-end">
-						<span class="w-full h-[30%] rounded-2xl bg-[#F8E329]"></span>
-					</div>
-					<div class="bg-gray-300/90 w-[9px] rounded-2xl h-[60px] flex items-end">
-						<span class="w-full h-[70%] rounded-2xl bg-[#F8E329]"></span>
-					</div>
-					<div class="bg-gray-300/90 w-[9px] rounded-2xl h-[60px] flex items-end">
-						<span class="w-full h-[90%] rounded-2xl bg-[#F8E329]"></span>
-					</div>
-					<div class="bg-gray-300/90 w-[9px] rounded-2xl h-[60px] flex items-end">
-						<span class="w-full h-[15%] rounded-2xl bg-[#F8E329]"></span>
-					</div>
+					<h1 class="font-bold text-[32px] mb-0">Eduardo Amaral</h1>
+					<p class="mb-0 text-[14px]">Analista de Dados</p>
 				</div>
 			</div>
-			<div class="flex-grow py-4 bg-white rounded-xl px-[32px]">
-				<div class="flex items-center gap-3">
-					<div
-						class="w-[56px] h-[56px] flex items-center justify-center bg-gradient-to-r from-[#F8E329] to-[#12B886] rounded-full">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-							class="w-[28px] h-[28px] text-white">
-							<path
-								d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z" />
-						</svg>
-					</div>
-					<div class="flex flex-col">
-						<span class="text-[14px] text-[#858585]">item B</span>
-						<strong class="text-[16px] font-bold">321</strong>
-					</div>
-				</div>
-			</div>
-			<div class="flex-grow py-4 bg-white rounded-xl px-[32px]">
-				<div class="flex items-center gap-3">
-					<div class="w-[56px] h-[56px] flex items-center justify-center bg-[#F4F7FE] rounded-full">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-							class="w-6 h-6 text-[#F8E329]">
-							<path
-								d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75ZM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 0 1-1.875-1.875V8.625ZM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 0 1 3 19.875v-6.75Z" />
-						</svg>
-					</div>
-					<div class="flex flex-col">
-						<span class="text-[14px] text-[#858585]">item C</span>
-						<strong class="text-[24px] font-bold">$350.40</strong>
-					</div>
-				</div>
+			<div class="flex gap-4">
+				<img src="images/LayoutTwo/Icons/Facebook.png" />
+				<img src="images/LayoutTwo/Icons/Twitter.png" />
+				<img src="images/LayoutTwo/Icons/Instagram.png" />
+				<img src="images/LayoutTwo/Icons/Linkedin.png" />
 			</div>
 		</div>
 
-		<div class="w-full rounded-xl px-[44px] py-[30px] bg-white my-[24px] flex items-center justify-between">
-			<div>
-				<h1 class="font-bold text-[32px]">Junte-se à <br> familia Proconph</h1>
-				<p class="font-[500] text-[16px] text-[#858585]">A melhor maneira de surpreender <br> os nossos clientes é a
-					prestação <br> de um serviço de qualidade.</p>
-				<button class="bg-[#F4FE41] flex items-center rounded-xl px-5 py-3 gap-3 mt-[20px]">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-						<path fill-rule="evenodd"
-							d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
-							clip-rule="evenodd" />
-					</svg>
-					<span class="text-[16px]">Saber mais</span>
-				</button>
+		<div class="w-full rounded-xl px-[24px] py-[24px] bg-[#F1F3F5] my-[15px]">
+			<div class="flex items-center gap-3">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-[#343A40]">
+					<path
+						d="M6 3a3 3 0 0 0-3 3v1.5a.75.75 0 0 0 1.5 0V6A1.5 1.5 0 0 1 6 4.5h1.5a.75.75 0 0 0 0-1.5H6ZM16.5 3a.75.75 0 0 0 0 1.5H18A1.5 1.5 0 0 1 19.5 6v1.5a.75.75 0 0 0 1.5 0V6a3 3 0 0 0-3-3h-1.5ZM12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5ZM4.5 16.5a.75.75 0 0 0-1.5 0V18a3 3 0 0 0 3 3h1.5a.75.75 0 0 0 0-1.5H6A1.5 1.5 0 0 1 4.5 18v-1.5ZM21 16.5a.75.75 0 0 0-1.5 0V18a1.5 1.5 0 0 1-1.5 1.5h-1.5a.75.75 0 0 0 0 1.5H18a3 3 0 0 0 3-3v-1.5Z" />
+				</svg>
+				<h1 class="text-[14px] text-[#343A40]">Visão Geral</h1>
 			</div>
-			<img src="images/LayoutOne/Dashboard_one.png" />
+			<div class="mt-[12px] flex items-center gap-[24px]">
+
+				<div class="flex flex-col flex-grow py-[16px] rounded-2xl bg-white items-center justify-center">
+					<div class="w-[72px] h-[72px] rounded-full flex justify-center items-center bg-[#F06595]">
+						<div class="w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#FFF0F6]">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+								stroke="currentColor" class="w-6 h-6 text-[#F06595]">
+								<path stroke-linecap="round" stroke-linejoin="round"
+									d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+							</svg>
+						</div>
+					</div>
+					<div class="flex flex-col items-center justify-center">
+						<span class="font-bold text-[20px]">Item A</span>
+						<p class="mb-0 text-[#868E96] text-[14px]">50</p>
+					</div>
+				</div>
+
+				<div class="flex flex-col flex-grow py-[16px] rounded-2xl bg-white items-center justify-center">
+					<div class="w-[72px] h-[72px] rounded-full flex justify-center items-center bg-[#FF922B]">
+						<div class="w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#FFF4E6]">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+								stroke="currentColor" class="w-6 h-6 text-[#FF922B]">
+								<path stroke-linecap="round" stroke-linejoin="round"
+									d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+							</svg>
+						</div>
+					</div>
+					<div class="flex flex-col items-center justify-center">
+						<span class="font-bold text-[20px]">Item B</span>
+						<p class="mb-0 text-[#868E96] text-[14px]">100</p>
+					</div>
+				</div>
+
+				<div class="flex flex-col flex-grow py-[16px] rounded-2xl bg-white items-center justify-center">
+					<div class="w-[72px] h-[72px] rounded-full flex justify-center items-center bg-[#FDCB31]">
+						<div class="w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#FFF9DB]">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+								stroke="currentColor" class="w-6 h-6">
+								<path stroke-linecap="round" stroke-linejoin="round"
+									d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
+							</svg>
+						</div>
+					</div>
+					<div class="flex flex-col items-center justify-center">
+						<span class="font-bold text-[20px]">Item C</span>
+						<p class="mb-0 text-[#868E96] text-[14px]">150</p>
+					</div>
+				</div>
+
+				<div class="flex flex-col flex-grow py-[16px] rounded-2xl bg-white items-center justify-center">
+					<div class="w-[72px] h-[72px] rounded-full flex justify-center items-center bg-[#FF6B6B]">
+						<div class="w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#FFF5F5]">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+								stroke="currentColor" class="w-6 h-6 text-[#FF6B6B]">
+								<path stroke-linecap="round" stroke-linejoin="round"
+									d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+							</svg>
+						</div>
+					</div>
+					<div class="flex flex-col items-center justify-center">
+						<span class="font-bold text-[20px]">Item D</span>
+						<p class="mb-0 text-[#868E96] text-[14px]">200</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="rounded-2xl bg-[#F1F3F5] p-[24px] mb-[16px]">
+
+		<div class="flex items-center gap-3">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+				<path
+					d="M5.625 3.75a2.625 2.625 0 1 0 0 5.25h12.75a2.625 2.625 0 0 0 0-5.25H5.625ZM3.75 11.25a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75ZM3 15.75a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75ZM3.75 18.75a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Z" />
+			</svg>
+			<h1>Listagem Padrão</h1>
+		</div>
+		<div class="flex flex-col my-5 gap-y-3">
+			<div class="bg-white rounded-2xl p-6 flex items-center justify-between">
+				<div class="flex items-center gap-4">
+					<div class="w-[44px] h-[44px] rounded-full flex items-center justify-center bg-[#FFF5F5]">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							stroke="currentColor" class="w-6 h-6 text-[#FF6B6B]">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+						</svg>
+					</div>
+					<div class="flex flex-col">
+						<h1 class="mb-0 font-bold text-[16px]">Lorem Ipsum</h1>
+						<p class="mb-0 text-[#868E96]">11/10/2023</p>
+					</div>
+				</div>
+				<div class="flex items-center gap-4">
+					<span class="text-[16px] text-[#E03131]">-R$ 70,00</span>
+					<button class="bg-transparent border-0 outline-0 flex items-center gap-3 font-bold">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m.75 12 3 3m0 0 3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+						</svg>
+						<span>PDF</span>
+					</button>
+					<button class="flex items-center gap-4 p-3 rounded-2xl bg-[#F1F3F5]">
+						<span>Anexar</span>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m.75 12 3 3m0 0 3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+						</svg>
+					</button>
+				</div>
+			</div>
+
+			<div class="bg-white rounded-2xl p-6 flex items-center justify-between">
+				<div class="flex items-center gap-4">
+					<div class="w-[44px] h-[44px] rounded-full flex items-center justify-center bg-[#FFF9DB]">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							stroke="currentColor" class="w-6 h-6 text-[#FCC419]">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+						</svg>
+					</div>
+					<div class="flex flex-col">
+						<h1 class="mb-0 font-bold text-[16px]">Lorem Ipsum</h1>
+						<p class="mb-0 text-[#868E96]">11/10/2023</p>
+					</div>
+				</div>
+				<div class="flex items-center gap-4">
+					<span class="text-[16px] text-[#E03131]">-R$ 50,00</span>
+					<button class="bg-transparent border-0 outline-0 flex items-center gap-3 font-bold">
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m.75 12 3 3m0 0 3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+						</svg>
+						<span>PDF</span>
+					</button>
+					<button class="flex items-center gap-4 p-3 rounded-2xl bg-[#F1F3F5]">
+						<span>Anexar</span>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+							stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round"
+								d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m.75 12 3 3m0 0 3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+						</svg>
+					</button>
+				</div>
+			</div>
+
 		</div>
 	</div>
 
 	<!-- Chart -->
-	<div class="flex items-center justify-between gap-2">
-		<div class="w-[75%] bg-white px-4 py-5 rounded-xl h-full">
-			<div class="border-b-2 border-gray-300/90">
-				<h1 class="mb-0 text-[18px] font-bold">Analise do Mês</h1>
+	<div class="p-5 rounded-2xl bg-[#F1F3F5]">
+		<div class="flex items-center justify-between">
+			<div class="flex items-center gap-3">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+					class="w-6 h-6">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+					<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+				</svg>
+				<h1 class="mb-0 text-[14px]">Desempenho</h1>
 			</div>
-			<Chart :chart-data="chartData" :chart-options="chartOptions" type="bar" />
+			<div class="flex gap-4 items-center">
+				<button class="border-0 outline-0 bg-transparent py-4 px-[30px]">
+					<span>Diario</span>
+				</button>
+				<button class="border-0 outline-0 bg-white rounded-3xl py-2 px-[30px]">
+					<span>Semanal</span>
+				</button>
+				<button class="border-0 outline-0 bg-transparent py-4 px-[30px]">
+					<span>Mensal</span>
+				</button>
+			</div>
 		</div>
-		<div class="w-[25%] bg-white px-4 py-5 rounded-xl h-full">
-			<div class="border-b-2 border-gray-300/90">
-				<h1 class="mb-0 text-[18px] font-bold">Analise do Mês</h1>
-			</div>
+		<div class="bg-white px-4 py-5 rounded-xl w-full">
 			<Chart :chart-data="chartDataPie" :chart-options="chartOptionsPie" type="pie" />
 		</div>
 	</div>
 
-	<!-- Table -->
-	<div class="mt-[23px]">
-		<div class="rounded-t-xl bg-white w-full p-4">
-			<h1 class="mb-0 text-[18px] font-bold">Pedidos</h1>
-		</div>
-		<table class="min-w-full">
-			<thead class="bg-[#FFF4C0] border-b">
-				<tr>
-					<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-						ID
-					</th>
-					<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-						Nome
-					</th>
-					<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-						Produto
-					</th>
-					<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-						Total
-					</th>
-					<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-						Status
-					</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class="bg-white border-b">
-					<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-						#000000
-					</td>
-					<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-						<div class="flex flex-col">
-							<span class="text-[14px] font-[500]">John Bushmill</span>
-							<span class="text-[12px] text-[#667085]">Johnb@mail.com</span>
-						</div>
-					</td>
-					<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-						Landing Page
-					</td>
-					<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-						<span class="text-[12px] text-[#667085]">$121.000</span>
-					</td>
-					<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-						<span
-							class="p-2 bg-[#FFF0EA] text-[red] flex items-center justify-center font-bold rounded-xl">Processando</span>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
 </template>
 
 
@@ -163,7 +222,7 @@ import Actions from "../../Components/Tables/Actions.vue";
 import Delete from "../../Components/Modals/Delete.vue";
 import Chart from "../../Components/Chart.vue";
 import { Link } from "@inertiajs/inertia-vue3";
-import { ref, defineProps, watch } from "vue";
+import { ref, defineProps, watch, reactive } from "vue";
 import { Inertia } from "@inertiajs/inertia";
 import { useForm } from "@inertiajs/inertia-vue3";
 import { useToast } from "vue-toastification";
@@ -177,6 +236,8 @@ const props = defineProps({
 	OrdemdeServico: Object,
 	AlertaError: Object,
 });
+
+
 
 const showDeleteModal = ref({
 	id: null,

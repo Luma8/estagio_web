@@ -1,38 +1,44 @@
 <template>
   <form @submit.prevent="submit">
-    <div class="bg-[#FFFBE8] py-[20px] relative h-screen">
-      <div class="fixed w-full flex items-center justify-center">
-        <img src="images/LayoutOne/bodyLayout_one.png" class="absolute mr-[760px]" />
-        <div class="bg-white rounded-xl my-4 h-[90vh] p-5 px-[80px] flex flex-col justify-center item-center w-[523px]">
-          <div class="flex items-center justify-center mb-[56px]">
-            <img src="images/LayoutOne/LogoLayout_one.png" class="w-[300px]" />
+    <div class="bg-[#124A41] p-[20px] relative">
+      <div class="flex items-center justify-between">
+        <div class="bg-white rounded-xl my-4 h-[90vh] p-[120px] flex flex-col justify-center item-center w-[603px]">
+          <div class="flex flex-col mb-[16px]">
+            <h1 class="font-bold text-[48px] mb-[16px]">Log in</h1>
+            <p class="mb-0 text-[#6F7187]">Amet minim mollit non deserunt ullamco est sit <br> <span
+                class="font-bold text-[#00A88D]">aliqua dolor do amet</span> sint.</p>
           </div>
-          <div class="flex flex-col mb-[32px]">
-            <label class="font-[400] text-[16px] text-[#858585]">Digite seu e-mail</label>
-            <input type="text"
-              class="px-3 py-2 bg-gray-200/90 rounded-xl font-semibold text-[16px] text-[#998AA6] outline-none border-0"
+          <div class="flex mb-[32px] border-b-2 flex gap-2 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path fill-rule="evenodd"
+                d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                clip-rule="evenodd" />
+            </svg>
+            <input type="text" placeholder="Digite seu e-mail" class="px-3 py-2 font-semibold text-[16px] text-[#998AA6] outline-none w-full border-0"
               v-model="form.email" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');" required />
           </div>
-          <div class="flex flex-col">
-            <label class="font-[400] text-[16px] text-[#858585]">Digite sua senha</label>
+          <div class="flex mb-[32px] border-b-2 flex gap-2 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path fill-rule="evenodd"
+                d="M15.75 1.5a6.75 6.75 0 0 0-6.651 7.906c.067.39-.032.717-.221.906l-6.5 6.499a3 3 0 0 0-.878 2.121v2.818c0 .414.336.75.75.75H6a.75.75 0 0 0 .75-.75v-1.5h1.5A.75.75 0 0 0 9 19.5V18h1.5a.75.75 0 0 0 .53-.22l2.658-2.658c.19-.189.517-.288.906-.22A6.75 6.75 0 1 0 15.75 1.5Zm0 3a.75.75 0 0 0 0 1.5A2.25 2.25 0 0 1 18 8.25a.75.75 0 0 0 1.5 0 3.75 3.75 0 0 0-3.75-3.75Z"
+                clip-rule="evenodd" />
+            </svg>
             <input type="password"
-              class="px-3 py-2 bg-gray-200/90 font-semibold text-[16px] text-[#998AA6] rounded-xl outline-none border-0"
+              placeholder="Digite sua senha"
+              class="px-3 py-2 font-semibold text-[16px] text-[#998AA6] outline-none w-full border-0"
               v-model="form.password" :feedback="false" toggleMask autocomplete="off" readonly
               onfocus="this.removeAttribute('readonly');" required />
-            <p class="text-[#3BFE7F] mt-[8px]">Esqueceu sua senha?</p>
           </div>
-          <button type="submit"
-            class="my-[32px] flex items-center gap-3 w-full bg-[#F4FE41] rounded-xl py-3 justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-              <path
-                d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z" />
-            </svg>
-            <span class="font-bold text-[16px]">Entrar</span>
-          </button>
-          <div class="flex justify-between items-center gap-1 my-[40px]">
-            <span class="border-2 border-[#EAEAEA] w-full" />
+          <div class="flex justify-between items-center">
+            <p class="text-[#858585] text-[16px]">Esqueceu sua senha?</p>
+            <button type="submit" class="flex items-center gap-3 bg-[#124A41] rounded-xl py-3 px-[61px] justify-center">
+              <span class="font-bold text-[16px] text-white">Entrar</span>
+            </button>
+          </div>
+          <div class="flex justify-between items-center gap-1 my-[16px]">
+            <span class="border-b-2 border-[#EAEAEA] w-full" />
             <span class="font-semibold text-[12px] text-[#6F7187] w-full text-center">Ou entre com</span>
-            <span class="border-2 border-[#EAEAEA] w-full" />
+            <span class="border-b-2 border-[#EAEAEA] w-full" />
           </div>
           <div class="flex items-center justify-center gap-5">
             <a href="#" class="flex border-2 py-4 w-full border-[#EAEAEA] rounded-xl items-center gap-3 justify-center">
@@ -44,8 +50,12 @@
               <span class="text-[16px] font-bold">Facebook</span>
             </a>
           </div>
-          <p class="text-center mt-[40px] text-gray-400/90">© 2024. Todos os direitos reservados, Políticas de <br>
-            Privacidade © </p>
+        </div>
+        <div class="2xl:px-[260px] px-[80px]">
+          <img src="images/LayoutTwo/LogoLayoutTwo.png" />
+          <h1 class="my-[26px] font-bold text-[48px] text-white">Entre em sua conta.</h1>
+          <p class="mb-[26px] text-[24px] font-[400] text-white">Faça o login agora para desfrutar de uma <br> experiência completa e personalizada.</p>
+          <span class="font-bold text-[16px] text-white">Entre para acessar suas informações pessoais</span>
         </div>
       </div>
     </div>
