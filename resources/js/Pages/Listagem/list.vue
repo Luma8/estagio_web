@@ -1,211 +1,318 @@
 <template>
-  <div class="h-screen">
-    <div class="flex flex-col bg-white rounded-2xl p-4">
-      <div class="flex items-center gap-3">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-          class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M9 4.5v15m6-15v15m-10.875 0h15.75c.621 0 1.125-.504 1.125-1.125V5.625c0-.621-.504-1.125-1.125-1.125H4.125C3.504 4.5 3 5.004 3 5.625v12.75c0 .621.504 1.125 1.125 1.125Z" />
-        </svg>
-        <h1 class="mb-0">Visão Geral</h1>
-      </div>
-
+  <div class="h-screen overflow-y-auto">
+    <div class="w-full rounded-xl my-[15px]">
       <div class="mt-[12px] flex items-center gap-[24px]">
 
-        <div class="flex flex-col flex-grow py-[16px] rounded-2xl bg-[#F1F3F5] items-center justify-center">
-          <div class="w-[72px] h-[72px] rounded-full flex justify-center items-center bg-[#F06595]">
-            <div class="w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#FFF0F6]">
-              <span class="text-[#F06595]">02</span>
+        <div class="flex flex-col flex-grow py-[16px] rounded-2xl bg-[#f0dfe8] relative  h-[136px]">
+          <div class="px-[24px] py-[18px]">
+            <div class="flex items-center gap-3">
+              <h1 class="mb-0 font-semibold text-[28px]">56</h1>
+              <span class="text-[#209F84] font-semibold text-[14px]">+4%</span>
             </div>
-          </div>
-          <div class="flex flex-col items-center justify-center">
-            <span class="font-bold text-[20px]">Estatísticas</span>
-            <p class="mb-0 text-[#868E96] text-[14px]">Total de ativos e inativos</p>
+            <p class="text-[##3E4954] font-semibold text-[16px]">Total</p>
+            <div class="bg-[#F8F8F8] rounded-2xl h-[9px] mt-[10px]">
+              <div class="bg-[#FB3E7A] w-[80%] rounded-2xl h-[9px]" />
+            </div>
           </div>
         </div>
 
-        <div class="flex flex-col flex-grow py-[16px] rounded-2xl bg-[#F1F3F5] items-center justify-center">
-          <div class="w-[72px] h-[72px] rounded-full flex justify-center items-center bg-[#FF922B]">
-            <div class="w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#FFF4E6]">
-              <span class="text-[#FF922B]">02</span>
+        <div class="flex flex-col flex-grow py-[16px] rounded-2xl bg-[#f0dfe8] relative h-[136px]">
+          <div class="px-[24px] py-[18px]">
+            <div class="flex items-center gap-3">
+              <h1 class="mb-0 font-semibold text-[28px]">785</h1>
+              <span class="text-[#209F84] font-semibold text-[14px]">+2,7%</span>
             </div>
+            <p class="text-[##3E4954] font-semibold text-[16px]">Item B</p>
           </div>
-          <div class="flex flex-col items-center justify-center">
-            <span class="font-bold text-[20px]">Ativos</span>
-            <p class="mb-0 text-[#868E96] text-[14px]">Total de registros ativos</p>
-          </div>
+          <img class="absolute bottom-0 w-full rounded-b-2xl"
+            src="images/LayoutFour/LineChart/LineChartList/Vector1.png" />
+          <img class="absolute bottom-0 w-full rounded-b-2xl"
+            src="images/LayoutFour/LineChart/LineChartList/Vector2.png" />
         </div>
 
-        <div class="flex flex-col flex-grow py-[16px] rounded-2xl bg-[#F1F3F5] items-center justify-center">
-          <div class="w-[72px] h-[72px] rounded-full flex justify-center items-center bg-[#FDCB31]">
-            <div class="w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#FFF9DB]">
-              <span class="text-[#FDCB31]">00</span>
+        <div class="flex flex-col flex-grow py-[16px] rounded-2xl bg-[#f0dfe8] relative h-[136px]">
+          <div class="px-[24px] py-[18px] z-[2]">
+            <div class="flex items-center gap-3">
+              <h1 class="mb-0 font-semibold text-[28px]">56</h1>
+              <span class="text-[#D22626] font-semibold text-[14px]">-3%</span>
             </div>
+            <p class="text-[##3E4954] font-semibold text-[16px]">Inativo</p>
           </div>
-          <div class="flex flex-col items-center justify-center">
-            <span class="font-bold text-[20px]">Inativos</span>
-            <p class="mb-0 text-[#868E96] text-[14px]">Total de registros inativos</p>
-          </div>
+          <img class="absolute bottom-0 w-full rounded-b-2xl z-[1]"
+            src="images/LayoutFour/LineChart/LineChartList/Vector3.png" />
         </div>
 
-        <div class="flex flex-col flex-grow py-[16px] rounded-2xl bg-[#F1F3F5] items-center justify-center">
-          <div class="w-[72px] h-[72px] rounded-full flex justify-center items-center bg-[#FF6B6B]">
-            <div class="w-[42px] h-[42px] rounded-full flex justify-center items-center bg-[#FFF5F5]">
-              <span class="text-[#FF6B6B]">0/2</span>
+        <div class="flex flex-col flex-grow py-[16px] rounded-2xl bg-[#f0dfe8] relative h-[136px]">
+          <div class="px-[24px]">
+            <div class="flex items-center justify-between">
+              <img src="images/LayoutFour/pieChart.png" />
+              <div>
+                <h1 class="flex justify-end mb-[19px] font-bold">Esse mês</h1>
+                <div class="flex items-center gap-4 mb-[14px]">
+                  <div class="flex items-center gap-2">
+                    <div class="bg-[#FB3E7A] w-[9px] h-[9px]"></div>
+                    <span class="font-bold">Ticket A</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="bg-[#0E8A74] w-[9px] h-[9px]"></div>
+                    <span class="font-bold">Ticket C</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-4">
+                  <div class="flex items-center gap-2">
+                    <div class="bg-[#3C65F5] w-[9px] h-[9px]"></div>
+                    <span class="font-bold">Ticket B</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="bg-[#FF7B31] w-[9px] h-[9px]"></div>
+                    <span class="font-bold">Ticket D</span>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="flex flex-col items-center justify-center">
-            <span class="font-bold text-[20px]">Esse mês</span>
-            <p class="mb-0 text-[#868E96] text-[14px]">Total este mês</p>
           </div>
         </div>
 
       </div>
-
-      <div class="flex items-center gap-3 mt-[16px]">
-        <button class="px-[23px] py-[9px] bg-[#F1F3F5] rounded-2xl">
-          <span>Cadastro</span>
-        </button>
-        <button class="px-[23px] py-[9px] bg-[#F1F3F5] rounded-2xl">
-          <span>Calendário</span>
-        </button>
-        <button class="px-[23px] py-[9px] bg-[#F1F3F5] rounded-2xl">
-          <span>Exportar</span>
-        </button>
-        <button @click="showFitler" :class="hasFilterClicked ? 'bg-[#124A41] text-white' : 'bg-[#F1F3F5]'" class="px-[23px] py-[9px] rounded-2xl">
-          <span>Filtros Avançados</span>
-        </button>
-      </div>
-
-      <div class="flex items-center gap-3 mt-[16px]" v-if="hasFilterClicked">
-        <div class="rounded-2xl border-2 border-gray-300/90 flex-grow flex flex-col py-1 px-2">
-          <label class="text-[#495057] text-[12px]">Nome</label>
-          <input class="border-0 p-0" type="text" value="João Silva, Maria Santos">
-        </div>
-        <div class="rounded-2xl border-2 border-gray-300/90 flex-grow flex flex-col py-1 px-2">
-          <label class="text-[#495057] text-[12px]">Gênero</label>
-          <select class="p-0 border-0">
-            <option>Masculino</option>
-          </select>
-        </div>
-        <div class="rounded-2xl border-2 border-gray-300/90 flex-grow flex flex-col py-1 px-2">
-          <label class="text-[#495057] text-[12px]">Status</label>
-          <select class="p-0 border-0">
-            <option>Ativo</option>
-          </select>
-        </div>
-        <div class="rounded-2xl border-2 border-gray-300/90 flex-grow flex flex-col py-1 px-2">
-          <label class="text-[#495057] text-[12px]">Estado</label>
-          <select class="p-0 border-0">
-            <option>São Paulo</option>
-          </select>
-        </div>
-        <div class="rounded-2xl border-2 border-gray-300/90 flex-grow flex flex-col py-1 px-2">
-          <label class="text-[#495057] text-[12px]">Celular</label>
-          <input class="border-0 p-0" type="text" value="(11)"/>
-        </div>
-      </div>
-
     </div>
 
     <div class="mt-4 flex flex-col max-md:px-2 py-1 rounded-lg shadow-sm">
       <div class="">
         <div class="overflow-hidden bg-[#F1F3F5] rounded-t-2xl p-4 overflow-x-visible">
           <div class="w-full flex items-center justify-between ">
-            <div class="flex items-center gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            <div
+              class="flex items-center justify-between w-[567px] gap-3 px-[29px] py-[12px] border border-gray-200/90 rounded-3xl">
+              <input type="text" placeholder="Pesquisar Produto..."
+                class=" placeholder:text-[#969BA0] w-full p-0 outline-0 border-0 bg-transparent" />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="w-6 h-6 text-[#A4A4A4]">
+                <path fill-rule="evenodd"
+                  d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+                  clip-rule="evenodd" />
               </svg>
-              <h1 class="font-semibold text-[14px] mb-0">Listagem</h1>
             </div>
             <div class="flex items-center gap-3">
-              <div class="w-[48px] h-[48px] bg-white rounded-full flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <div>
+                <button @click="showFitler"
+                  class="px-[35px] py-[12px] border border-[#EA4989] rounded-3xl flex gap-4 items-center text-[#EA4989]">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="w-[20px] h-[20px]">
+                    <path fill-rule="evenodd"
+                      d="M3.792 2.938A49.069 49.069 0 0 1 12 2.25c2.797 0 5.54.236 8.209.688a1.857 1.857 0 0 1 1.541 1.836v1.044a3 3 0 0 1-.879 2.121l-6.182 6.182a1.5 1.5 0 0 0-.439 1.061v2.927a3 3 0 0 1-1.658 2.684l-1.757.878A.75.75 0 0 1 9.75 21v-5.818a1.5 1.5 0 0 0-.44-1.06L3.13 7.938a3 3 0 0 1-.879-2.121V4.774c0-.897.64-1.683 1.542-1.836Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <span>Filtros</span>
+                </button>
+                <div class="w-[406px] rounded-xl p-3 absolute bg-white h-auto" v-if="hasFilterClicked">
+                  <h1 class="border-b-2 border-gray-300/90">Colunas</h1>
+                  <div class="my-4 flex flex-col gap-y-3">
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>ID</label>
+                    </div>
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>Nome</label>
+                    </div>
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>Produto</label>
+                    </div>
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>Total</label>
+                    </div>
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>Endereço</label>
+                    </div>
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>Status</label>
+                    </div>
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>Imposto</label>
+                    </div>
+                    <div class="flex gap-2">
+                      <input type="checkbox">
+                      <label>Ação</label>
+                    </div>
+                  </div>
+                  <h1 class="">Filtro</h1>
+                  <div class="my-3 flex flex-col gap-y-3 border-b-2 border-t-2 border-gray-200/90 py-4">
+                    <button class="w-full flex justify-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd"
+                          d="M11.47 2.47a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1-1.06 1.06l-2.47-2.47V21a.75.75 0 0 1-1.5 0V4.81L8.78 7.28a.75.75 0 0 1-1.06-1.06l3.75-3.75Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      <span>Ordenar A-Z</span>
+                    </button>
+                    <button class="w-full flex justify-start">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd"
+                          d="M12 2.25a.75.75 0 0 1 .75.75v16.19l2.47-2.47a.75.75 0 1 1 1.06 1.06l-3.75 3.75a.75.75 0 0 1-1.06 0l-3.75-3.75a.75.75 0 1 1 1.06-1.06l2.47 2.47V3a.75.75 0 0 1 .75-.75Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      <span>Ordenar Z-A</span>
+                    </button>
+                  </div>
+                  <button class="w-full py-3 rounded-xl bg-[#EC4166]">
+                    <span class="font-bold text-[14px] text-white">Aplicar</span>
+                  </button>
+                </div>
+              </div>
+              <button
+                class="px-[35px] py-[12px] border border-[#EA4989] rounded-3xl flex gap-4 items-center text-[#EA4989]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                  class="w-[20px] h-[20px]">
                   <path
-                    d="M19.5 21a3 3 0 0 0 3-3v-4.5a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3V18a3 3 0 0 0 3 3h15ZM1.5 10.146V6a3 3 0 0 1 3-3h5.379a2.25 2.25 0 0 1 1.59.659l2.122 2.121c.14.141.331.22.53.22H19.5a3 3 0 0 1 3 3v1.146A4.483 4.483 0 0 0 19.5 9h-15a4.483 4.483 0 0 0-3 1.146Z" />
+                    d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625Z" />
+                  <path
+                    d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
                 </svg>
-              </div>
-              <div class="w-[48px] h-[48px] bg-white rounded-full flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                  <path fill-rule="evenodd"
-                    d="M16.5 4.478v.227a48.816 48.816 0 0 1 3.878.512.75.75 0 1 1-.256 1.478l-.209-.035-1.005 13.07a3 3 0 0 1-2.991 2.77H8.084a3 3 0 0 1-2.991-2.77L4.087 6.66l-.209.035a.75.75 0 0 1-.256-1.478A48.567 48.567 0 0 1 7.5 4.705v-.227c0-1.564 1.213-2.9 2.816-2.951a52.662 52.662 0 0 1 3.369 0c1.603.051 2.815 1.387 2.815 2.951Zm-6.136-1.452a51.196 51.196 0 0 1 3.273 0C14.39 3.05 15 3.684 15 4.478v.113a49.488 49.488 0 0 0-6 0v-.113c0-.794.609-1.428 1.364-1.452Zm-.355 5.945a.75.75 0 1 0-1.5.058l.347 9a.75.75 0 1 0 1.499-.058l-.346-9Zm5.48.058a.75.75 0 1 0-1.498-.058l-.347 9a.75.75 0 0 0 1.5.058l.345-9Z"
-                    clip-rule="evenodd" />
-                </svg>
-              </div>
-              <div class="w-[48px] h-[48px] bg-white rounded-full flex justify-center items-center">
+                <span>Exportar</span>
+              </button>
+              <button class="w-[48px] h-[48px] bg-[#EA4989] text-white rounded-full flex justify-center items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                   <path fill-rule="evenodd"
                     d="M12 5.25c1.213 0 2.415.046 3.605.135a3.256 3.256 0 0 1 3.01 3.01c.044.583.077 1.17.1 1.759L17.03 8.47a.75.75 0 1 0-1.06 1.06l3 3a.75.75 0 0 0 1.06 0l3-3a.75.75 0 0 0-1.06-1.06l-1.752 1.751c-.023-.65-.06-1.296-.108-1.939a4.756 4.756 0 0 0-4.392-4.392 49.422 49.422 0 0 0-7.436 0A4.756 4.756 0 0 0 3.89 8.282c-.017.224-.033.447-.046.672a.75.75 0 1 0 1.497.092c.013-.217.028-.434.044-.651a3.256 3.256 0 0 1 3.01-3.01c1.19-.09 2.392-.135 3.605-.135Zm-6.97 6.22a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l1.752-1.751c.023.65.06 1.296.108 1.939a4.756 4.756 0 0 0 4.392 4.392 49.413 49.413 0 0 0 7.436 0 4.756 4.756 0 0 0 4.392-4.392c.017-.223.032-.447.046-.672a.75.75 0 0 0-1.497-.092c-.013.217-.028.434-.044.651a3.256 3.256 0 0 1-3.01 3.01 47.953 47.953 0 0 1-7.21 0 3.256 3.256 0 0 1-3.01-3.01 47.759 47.759 0 0 1-.1-1.759L6.97 15.53a.75.75 0 0 0 1.06-1.06l-3-3Z"
                     clip-rule="evenodd" />
                 </svg>
-              </div>
+              </button>
+
             </div>
           </div>
-          <div class="bg-white p-4 mt-[16px] rounded-2xl">
-            <table class="min-w-full">
-              <thead class="border-b">
-                <tr>
-                  <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left font-bold">
-                    <input type="checkbox">
-                  </th>
-                  <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left font-bold">
-                    Cliente
-                  </th>
-                  <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left font-bold">
-                    E-mail
-                  </th>
-                  <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left font-bold">
-                    Celular
-                  </th>
-                  <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left font-bold">
-                    Celular
-                  </th>
-                  <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left font-bold">
-                    Endereço
-                  </th>
-                  <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left font-bold">
-                    Ação
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="bg-white border-b" v-for="data in data_mock" :key="data?.id">
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    <input type="checkbox" />
-                  </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap flex gap-3 items-center">
-                    <span>{{ data?.name }}</span>
-                  </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+          <table class="min-w-full mt-[24px]">
+            <thead class="border-b">
+              <tr class="rounded-t-lg bg-white">
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left font-bold">
+                  <div class="flex items-center gap-3">
+                    <Checkbox v-model="checked" :binary="true" />
+                    <span>ID</span>
+                  </div>
+                </th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left font-bold">
+                  <div class="flex items-center justify-between font-bold">
+                    <span>Produto</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                </th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left font-bold">
+                  <div class="flex items-center justify-between font-bold">
+                    <span>Data</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                </th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left font-bold">
+                  <div class="flex items-center justify-between font-bold">
+                    <span>Cliente</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                </th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left font-bold">
+                  <div class="flex items-center justify-between font-bold">
+                    <span>Total</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                </th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left font-bold">
+                  <span>Pagamento</span>
+                </th>
+                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left font-bold">
+                  Ação
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b" v-for="(data, index) in data_mock" :key="data?.id"
+                :class="index % 2 === 0 ? 'bg-[#F9F9FC]' : 'bg-white'">
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap flex gap-3 items-center">
+                  <div class="flex items-center gap-3">
+                    <Checkbox v-model="checked" :binary="true" />
+                    <span>{{ data?.id }}</span>
+                  </div>
+                </td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                  <div class="flex gap-3 items-center">
+                    <div class="w-[44px] h-[44px] rounded-xl bg-[#E0E2E7]"></div>
                     <div class="flex flex-col">
-                      <span>{{ data?.email }}</span>
+                      <h1 class="mb-0 text-[14px] font-semibold">{{ data?.productName }}</h1>
+                      <p class="mb-0 font-[400] text-[12px]">+3 produtos</p>
                     </div>
-                  </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    {{ data?.phone }}
-                  </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    <span>{{ data?.phone }}</span>
-                  </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    <span>
-                      {{ data?.address }}
-                    </span>
-                  </td>
-                  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                    <button>
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                        <path
-                          d="M18.75 12.75h1.5a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5ZM12 6a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 12 6ZM12 18a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 12 18ZM3.75 6.75h1.5a.75.75 0 1 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5ZM5.25 18.75h-1.5a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 0 1.5ZM3 12a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 3 12ZM9 3.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5ZM12.75 12a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0ZM9 15.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" />
-                      </svg>
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                  </div>
+                </td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                  {{ data?.date }}
+                </td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                  <span>{{ data?.name }}</span>
+                </td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                  <span>
+                    {{ data?.price }}
+                  </span>
+                </td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                  <span>
+                    {{ data?.cardFlag }}
+                  </span>
+                </td>
+                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-6 h-6 text-[#EA4989]">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 0 1 1.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.559.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.894.149c-.424.07-.764.383-.929.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 0 1-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.398.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 0 1-.12-1.45l.527-.737c.25-.35.272-.806.108-1.204-.165-.397-.506-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.108-1.204l-.526-.738a1.125 1.125 0 0 1 .12-1.45l.773-.773a1.125 1.125 0 0 1 1.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894Z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="flex justify-between items-center border-b-2xl px-[24px] py-[19px] bg-white">
+            <span class="text-[#667085] font-semibold text-[14px]">Mostrando 1-10 de 100</span>
+            <div class="flex items-center gap-5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="w-6 h-6 text-[#EA4989]">
+                <path fill-rule="evenodd"
+                  d="M10.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L12.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z"
+                  clip-rule="evenodd" />
+                <path fill-rule="evenodd"
+                  d="M4.72 11.47a.75.75 0 0 0 0 1.06l7.5 7.5a.75.75 0 1 0 1.06-1.06L6.31 12l6.97-6.97a.75.75 0 0 0-1.06-1.06l-7.5 7.5Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <div class="flex items-center gap-3">
+                <div class="w-[43px] h-[43px] flex items-center justify-center rounded-[4px] bg-[#EA4989] text-white">1
+                </div>
+                <div class="w-[43px] h-[43px] flex items-center justify-center rounded-[4px] bg-[#EDEDED]">2</div>
+                <div class="w-[43px] h-[43px] flex items-center justify-center rounded-[4px] bg-[#EDEDED]">3</div>
+                <div class="w-[43px] h-[43px] flex items-center justify-center rounded-[4px] bg-[#EDEDED]">4</div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="w-6 h-6 text-[#EA4989]">
+                <path fill-rule="evenodd"
+                  d="M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                  clip-rule="evenodd" />
+                <path fill-rule="evenodd"
+                  d="M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -236,12 +343,11 @@ import { useForm } from "@inertiajs/inertia-vue3";
 import AchievementCard from "../../Layouts/CardsListagens.vue";
 
 const data_mock = [
-  { id: '#0001', name: 'Arthur', email: 'ArthurMorgan@gmail.com', product: 'Landing Page', product_value: '$120,00', status: 'Processando', address: 'Rua 01 do 0101', phone: '(83) 0 0000-0000' },
-  { id: '#0002', name: 'John', email: 'JohnMarston@gmail.com', product: 'Site Completo', product_value: '$480,00', status: 'Processando', address: 'Rua 02 do 0101', phone: '(83) 0 0000-0000' },
-  { id: '#0004', name: 'Lenny', email: 'LennySummers@gmail.com', product: 'Landing Page', product_value: '$120,00', status: 'Andamento', address: 'Rua 03 do 0101', phone: '(83) 0 0000-0000' },
-  { id: '#0005', name: 'Dutch', email: 'DutchVanDerLide@gmail.com', product: 'Landing Page', product_value: '$120,00', status: 'Processando', address: 'Rua 04 do 0101', phone: '(83) 0 0000-0000' },
-  { id: '#0006', name: 'Hosea', email: 'HoseaMathews@gmail.com', product: 'E-commerce', product_value: '$126,00', status: 'Concluido', address: 'Rua 05 do 0101', phone: '(83) 0 0000-0000' },
-  { id: '#0007', name: 'Micah', email: 'MicahBell@gmail.com', product: 'Saas', product_value: '$750,00', status: 'Processando', address: 'Rua 06 do 0101', phone: '(83) 0 0000-0000' },
+  { date: '29 Dec 2022', price: '$ 121.000', cardFlag: 'Visa', productName: 'Handmade Pouch', id: '#0001', name: 'Arthur', email: 'ArthurMorgan@gmail.com', product: 'Landing Page', product_value: '$120,00', status: 'Processando', address: 'Rua 01 do 0101', phone: '(83) 0 0000-0000' },
+  { date: '12 Nov 2022', price: '$ 590.000', cardFlag: 'Mastercard', productName: 'Handsomejack', id: '#0002', name: 'John', email: 'JohnMarston@gmail.com', product: 'Site Completo', product_value: '$480,00', status: 'Processando', address: 'Rua 02 do 0101', phone: '(83) 0 0000-0000' },
+  { date: '14 Set 2022', price: '$ 121.000', cardFlag: 'Visa', productName: 'SmartWatch E2', id: '#0004', name: 'Lenny', email: 'LennySummers@gmail.com', product: 'Landing Page', product_value: '$120,00', status: 'Andamento', address: 'Rua 03 do 0101', phone: '(83) 0 0000-0000' },
+  { date: '04 Dec 2022', price: '$ 348.000', cardFlag: 'Mastercard', productName: 'SmartWatch E1', id: '#0005', name: 'Dutch', email: 'DutchVanDerLide@gmail.com', product: 'Landing Page', product_value: '$120,00', status: 'Processando', address: 'Rua 04 do 0101', phone: '(83) 0 0000-0000' },
+  { date: '02 Fev 2022', price: '$ 121.000', cardFlag: 'Visa', productName: 'HeadPhone G1 Pro', id: '#0006', name: 'Hosea', email: 'HoseaMathews@gmail.com', product: 'E-commerce', product_value: '$126,00', status: 'Concluido', address: 'Rua 05 do 0101', phone: '(83) 0 0000-0000' },
 ]
 
 const _ = require("lodash");
@@ -252,6 +358,7 @@ const props = defineProps({
   Filtros: Object,
   Registros: Object,
 });
+
 
 const hasFilterClicked = ref(false);
 

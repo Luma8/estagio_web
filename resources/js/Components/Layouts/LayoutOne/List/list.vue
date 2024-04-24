@@ -75,7 +75,7 @@
           <div class="w-full bg-white p-4 flex items-center justify-between rounded-t-2xl">
             <h1 class="font-semibold text-[18px]">Pedidos</h1>
             <div class="flex items-center gap-3">
-              <div>
+              <div class="relative">
                 <button class="border-2 border-gray-200/90 rounded-2xl p-2 flex items-center justify-center gap-2" @click="showFitler">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                     <path
