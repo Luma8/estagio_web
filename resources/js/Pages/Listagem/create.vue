@@ -1,44 +1,57 @@
 <template>
-  <div class="h-screen flex flex-col gap-y-5">
+  <div>
 
-    <div class="flex items-center gap-4 my-[12px]">
-      <div class="w-[50%]">
-        <label class="mb-[10px] text-[16px] font-bold">Nome</label>
-        <input class="w-full rounded-xl p-[16px] border border-gray-300/90" placeholder="Digite o nome do perfil" type="text">
-      </div>
-      <div class="w-[50%]">
-        <label class="mb-[10px] text-[16px] font-bold">E-mail</label>
-        <input class="w-full rounded-xl p-[16px] border border-gray-300/90" placeholder="Digite o e-mail do perfil" type="text">
-      </div>
+    <div class="flex flex-col">
+      <p class="text-[#C2C6CE] mb-[8px] text-[18px] ">Dashboard</p>
+      <h1 class="text-white text-[23px] font-semibold mb-[14px]">Seja bem-vindo!</h1>
     </div>
 
-    <div class="flex items-center gap-4 my-[12px]">
-      <div class="w-[50%]">
-        <label class="mb-[10px] text-[16px] font-bold">Data de Nascimento</label>
-        <input class="w-full rounded-xl p-[16px] border border-gray-300/90" placeholder="Digite a data de nascimento do perfil" type="text">
-      </div>
-      <div class="w-[50%]">
-        <label class="mb-[10px] text-[16px] font-bold">Celular</label>
-        <input class="w-full rounded-xl p-[16px] border border-gray-300/90" placeholder="Digite o celular do perfil" type="text">
-      </div>
-    </div>
+    <div class="p-[24px] rounded-2xl flex flex-col gap-y-4 bg-white">
 
-    <div class="flex items-center gap-4 my-[12px] mb-[24px]">
-      <div class="w-[50%]">
-        <label class="mb-[10px] text-[16px] font-bold">Endereço</label>
-        <input class="w-full rounded-xl p-[16px] border border-gray-300/90" placeholder="Digite o endereço do perfil" type="text">
+      <div class="flex items-center gap-3">
+        <div class="flex-grow flex flex-col">
+          <label>Nome Completo</label>
+          <input type="text" class="rounded-[20px] px-[20px] py-[12px] border-0 outline-0 bg-gray-200/90" />
+        </div>
+        <div class="flex-grow flex flex-col">
+          <label>Email</label>
+          <input type="text" class="rounded-[20px] px-[20px] py-[12px] border-0 outline-0 bg-gray-200/90" />
+        </div>
       </div>
-      <div class="w-[50%]">
-        <label class="mb-[10px] text-[16px] font-bold">Linkedin</label>
-        <input class="w-full rounded-xl p-[16px] border border-gray-300/90" placeholder="Digite o linkedin do perfil" type="text">
-      </div>
-    </div>
 
-    <button class="w-full py-[12px] rounded-md text-white font-bold bg-[#EC4166]">Salvar</button>
+      <div class="flex items-center gap-3">
+        <div class="flex-grow flex flex-col">
+          <label>Endereço</label>
+          <input type="text" class="rounded-[20px] px-[20px] py-[12px] border-0 outline-0 bg-gray-200/90" />
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="flex-grow flex flex-col">
+          <label>Data de nascimento</label>
+          <input type="text" class="rounded-[20px] px-[20px] py-[12px] border-0 outline-0 bg-gray-200/90" />
+        </div>
+        <div class="flex-grow flex flex-col">
+          <label>Gênero</label>
+          <input type="text" class="rounded-[20px] px-[20px] py-[12px] border-0 outline-0 bg-gray-200/90" />
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <div class="flex-grow flex flex-col">
+          <label>Número de telefone</label>
+          <input type="text" class="rounded-[20px] px-[20px] py-[12px] border-0 outline-0 bg-gray-200/90" />
+        </div>
+        <div class="flex-grow flex flex-col">
+          <label>Interesses</label>
+          <input type="text" class="rounded-[20px] px-[20px] py-[12px] border-0 outline-0 bg-gray-200/90" />
+        </div>
+      </div>
+
+      <button class="text-white bg-[#013C94] px-[19px] py-[12px] rounded-[12px] w-[100px]">
+        Salvar
+      </button>
+    </div>
 
   </div>
 </template>
-
-<script setup>
-
-</script>

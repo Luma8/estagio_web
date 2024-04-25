@@ -1,54 +1,36 @@
 <template>
   <form @submit.prevent="submit">
-    <div class="bg-gradient-to-t from-[#F24A62] to-[#FF369C] h-screen relative">
-      <div class="flex items-center h-screen">
-        <div class="w-[50%] h-screen flex items-center justify-center relative">
-          <img class="absolute bottom-0 right-0" src="images/LayoutFour/Ornament1.png" />
-          <img class="absolute top-0 left-0" src="images/LayoutFour/Ornament2.png" />
-          <div>
-            <h1 class="mb-[27px] font-bold text-[64px] text-white">Entre em sua <br> conta.</h1>
-            <p class="mb-[27px] text-[24px] font-[400] text-white">Faça o login agora para desfrutar de <br> uma
-              experiência completa e <br> personalizada.</p>
-            <span class="font-bold text-[16px] text-white">Entre para acessar suas informações pessoais</span>
-          </div>
+    <div class="p-[20px] div-background relative flex items-center justify-center h-screen">
+      <div class="bg-white rounded-xl my-4 h-[90vh] p-[32px] flex flex-col justify-center item-center w-[603px]">
+        <div class="my-[49px] flex items-center justify-center">
+          <img src="images/LayoutThree/Logo.png">
         </div>
-        <div class="w-[50%] bg-gray-200/90 px-[62px] flex flex-col h-screen">
-          <div class="flex flex-col 2xl:mb-[16px] mb-[10px]">
-            <h1 class="font-bold 2xl:mt-[53px] mb-[30px] text-[32px]">Welcome Back!</h1>
-            <p class="mb-[24px] text-[#6F7187]">Amet minim mollit non deserunt ullamco est sit <br> aliqua dolor do amet
-              sint.</p>
-          </div>
-          <div class="bg-white rounded-2xl 2xl:p-[40px] p-[30px] h-full">
-            <div class="2xl:mb-[40px] mb-[10px]">
-              <label class="text-[16px] font-semibold mb-[10px]">E-mail</label>
-              <input type="text" placeholder="Digite seu e-mail"
-                class="p-[16px] text-[16px] font-semibold text-[16px] rounded-xl placeholder:text-[#6F7187] text-[#6F7187] w-full border border-gray-200/90"
-                v-model="form.email" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');" required />
-            </div>
-            <div>
-              <label class="text-[16px] font-semibold mb-[10px]">Senha</label>
-              <input type="password" placeholder="Digite sua senha"
-                class="p-[16px] text-[16px] font-semibold text-[16px] rounded-xl placeholder:text-[#6F7187] text-[#6F7187] w-full border border-gray-200/90"
-                v-model="form.password" :feedback="false" toggleMask autocomplete="off" readonly
-                onfocus="this.removeAttribute('readonly');" required />
-            </div>
-            <div class="flex justify-end mt-[24px] 2xl:mb-[40px] mb-[10px]">
-              <p class="text-[#FF369C] text-[16px] font-bold border-b border-[#FF369C]">Esqueceu sua senha?</p>
-            </div>
-            <button type="submit" class="bg-[#FF369C] rounded-xl py-[16px] w-full justify-center">
-              <span class="font-bold text-[16px] text-white">Entrar</span>
-            </button>
-            <a href="#"
-              class="flex border-2 my-[24px] py-4 w-full border-[#EAEAEA] rounded-xl items-center gap-3 justify-center">
-              <img src="images/LayoutOne/google.png" alt="Google">
-              <span class="text-[16px] font-bold">Entrar com Google</span>
-            </a>
-            <div class="text-center">
-              <p class="text-[16px]">Não tem uma conta? <span
-                  class="text-[#FF369C] font-bold border-b border-[#FF369C]">Criar conta</span></p>
-            </div>
-          </div>
+
+        <div class="flex flex-col mb-[32px]">
+          <label class="text-[#858585] text-[16px]">Digite seu e-mail</label>
+          <input type="text"
+            class="px-3 py-2 font-semibold text-[16px] text-[#998AA6] outline-none w-full border-0 bg-gray-300/90 rounded-xl mt-[6px]"
+            v-model="form.email" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');" required />
         </div>
+
+        <div class="flex flex-col">
+          <label class="text-[#858585] text-[16px]">Digite sua senha</label>
+          <input type="password"
+            class="px-3 py-2 font-semibold text-[16px] text-[#998AA6] outline-none w-full border-0 bg-gray-300/90 rounded-xl mt-[6px]"
+            v-model="form.password" :feedback="false" toggleMask autocomplete="off" readonly
+            onfocus="this.removeAttribute('readonly');" required />
+        </div>
+
+        <p class="text-[#858585] mt-[6px] mb-[32px] text-[16px] border-b-2 w-[250px] border-gray-200/90">Esqueceu sua
+          senha? Clique Aqui.</p>
+        <button type="submit" class="flex items-center gap-3 bg-[#013C94] rounded-xl py-3 px-[61px] justify-center">
+          <span class="font-bold text-[16px] text-white">Entrar</span>
+        </button>
+        <div class="flex items-center gap-3 mb-[55px] mt-[24px]">
+          <input type="checkbox" />
+          <p class="mb-0 text-[#858585]">Manter-me logado</p>
+        </div>
+        <p class="mb-0 text-[#858585]">© 2024. Todos os direitos reservados, Políticas de Privacidade © </p>
       </div>
     </div>
   </form>
@@ -98,14 +80,12 @@ onUnmounted(() => {
 </script>
 
 <style>
-.body-background {
-  background-image: url("/images/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100% 100% 100%;
+.div-background {
+  background-image: url("/images/LayoutFive/photo.png");
   background-size: cover;
   background-attachment: fixed;
-  background-position: center;
-  height: 163.5vh;
+  background-size: 100% 100% 100% 100%;
+  background-repeat: no-repeat;
 }
 
 body {
