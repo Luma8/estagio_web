@@ -1,82 +1,204 @@
 <template>
 	<div class="items-center justify-center w-full z-[3]">
-		<div class="flex flex-col">
-			<p class="text-[#C2C6CE] mb-[8px] text-[18px] ">Dashboard</p>
-			<h1 class="text-white text-[23px] font-semibold mb-[14px]">Seja bem-vindo!</h1>
+		<div class="flex items-center justify-between">
+			<div class="flex flex-col">
+				<h1 class="text-[23px] font-bold">Dashboard</h1>
+				<p class="text-[#969BA0] mb-[8px] text-[18px] ">Bem-vindo ao Proconph Admin!</p>
+			</div>
+			<div class="flex flex-col justify-end">
+				<h2 class="text-[#222132] font-semibold text-[24px] flex justify-end">{{ time }}</h2>
+				<p class="text-[#757971] font-[400] text-[12px]">{{ dateString }}</p>
+			</div>
 		</div>
-		<div class="w-full rounded-xl my-[15px] z-[3]">
+
+		<div class="w-full rounded-xl my-[24px] z-[3]">
+
 			<div class="mt-[12px] flex items-center gap-[24px]">
 
-				<div class="flex flex-col flex-grow p-[20px] rounded-2xl bg-white relative z-[3]">
-					<div>
-						<div class="flex items-center gap-3 mb-[8px]">
+				<div class="flex relative flex-col flex-grow p-[20px] rounded-2xl bg-white relative z-[3] h-[150px]">
+					<div class="flex justify-between items-center">
+						<div class="flex items-center gap-3">
+							<span class="font-bold text-[18px]">215</span>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-								class="w-6 h-6 text-[#3250FF]">
-								<path d="M12 7.5a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z" />
+								class="w-6 h-6 text-[#0E8A74]">
 								<path fill-rule="evenodd"
-									d="M1.5 4.875C1.5 3.839 2.34 3 3.375 3h17.25c1.035 0 1.875.84 1.875 1.875v9.75c0 1.036-.84 1.875-1.875 1.875H3.375A1.875 1.875 0 0 1 1.5 14.625v-9.75ZM8.25 9.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM18.75 9a.75.75 0 0 0-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75V9.75a.75.75 0 0 0-.75-.75h-.008ZM4.5 9.75A.75.75 0 0 1 5.25 9h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H5.25a.75.75 0 0 1-.75-.75V9.75Z"
-									clip-rule="evenodd" />
-								<path
-									d="M2.25 18a.75.75 0 0 0 0 1.5c5.4 0 10.63.722 15.6 2.075 1.19.324 2.4-.558 2.4-1.82V18.75a.75.75 0 0 0-.75-.75H2.25Z" />
-							</svg>
-							<p class="mb-0 text-[16px] font-semibold">Item A</p>
-						</div>
-						<h1 class="mb-0 font-semibold text-[32px]">$75,000</h1>
-					</div>
-				</div>
-
-				<div class="flex flex-col flex-grow p-[20px] rounded-2xl bg-white relative z-[3]">
-					<div>
-						<div class="flex items-center gap-3 mb-[8px]">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-								class="w-6 h-6 text-[#22CAAD]">
-								<path
-									d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
-							</svg>
-							<p class="mb-0 text-[16px] font-semibold">Item B</p>
-						</div>
-						<h1 class="mb-0 font-semibold text-[32px]">31,500</h1>
-					</div>
-				</div>
-
-				<div class="flex flex-col flex-grow p-[20px] rounded-2xl bg-white relative z-[3]">
-					<div>
-						<div class="flex items-center gap-3 mb-[8px]">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-								class="w-6 h-6 text-[#EB3D4D]">
-								<path
-									d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
-								<path fill-rule="evenodd"
-									d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z"
+									d="M11.47 7.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z"
 									clip-rule="evenodd" />
 							</svg>
-							<p class="mb-0 text-[16px] font-semibold">Item C</p>
 						</div>
-						<h1 class="mb-0 font-semibold text-[32px]">$51,250</h1>
+						<span class="font-bold text-[18px]">Pedidos</span>
 					</div>
+					<img class="w-full bottom-0" src="images/LayoutSix/Vector1.png" />
 				</div>
 
-				<div class="flex flex-col flex-grow p-[20px] rounded-2xl bg-white relative z-[3]">
-					<div>
-						<div class="flex items-center gap-3 mb-[8px]">
+				<div class="flex relative flex-col flex-grow p-[20px] rounded-2xl bg-white relative z-[3] h-[150px]">
+					<div class="flex justify-between items-center">
+						<div class="flex items-center gap-3">
+							<span class="font-bold text-[18px]">$536k</span>
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-								class="w-6 h-6 text-[#374957]">
-								<path
-									d="M5.25 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM2.25 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM18.75 7.5a.75.75 0 0 0-1.5 0v2.25H15a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H21a.75.75 0 0 0 0-1.5h-2.25V7.5Z" />
+								class="w-6 h-6 text-[#FF3131]">
+								<path fill-rule="evenodd"
+									d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+									clip-rule="evenodd" />
 							</svg>
-							<p class="mb-0 text-[16px] font-semibold">Item D</p>
 						</div>
-						<h1 class="mb-0 font-semibold text-[32px]">11,300</h1>
+						<span class="font-bold text-[18px]">Receita</span>
+					</div>
+					<img class="w-full bottom-0" src="images/LayoutSix/Vector3.png" />
+				</div>
+
+				<div class="flex relative flex-col flex-grow p-[20px] rounded-2xl bg-white relative z-[3] h-[150px]">
+					<div class="flex justify-between items-center">
+						<div class="flex items-center gap-3">
+							<span class="font-bold text-[18px]">652</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+								class="w-6 h-6 text-[#0E8A74]">
+								<path fill-rule="evenodd"
+									d="M11.47 7.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z"
+									clip-rule="evenodd" />
+							</svg>
+						</div>
+						<span class="font-bold text-[18px]">Vendas</span>
+					</div>
+					<img class="w-full bottom-0" src="images/LayoutSix/Group2.png" />
+				</div>
+
+				<div class="flex relative flex-col flex-grow p-[20px] rounded-2xl bg-white relative z-[3] h-[150px]">
+					<div class="flex justify-between items-center">
+						<div class="flex items-center gap-3">
+							<div class="flex flex-col">
+								<h1 class="font-bold text-[18px]">45,242</h1>
+								<p class="mb-0 font-[#194039] font-semibold text-[15px]">Evento Realizado</p>
+							</div>
+						</div>
+						<img src="images/LayoutSix/CircleRing.png" />
+					</div>
+					<div class="flex gap-3 items-center mt-">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+							class="w-6 h-6 text-[#0E8A74]">
+							<path fill-rule="evenodd"
+								d="M11.47 7.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z"
+								clip-rule="evenodd" />
+						</svg>
+						<p class="text-[#0E8A74]"><strong>2.4%</strong>do que na semana passada </p>
 					</div>
 				</div>
 
 			</div>
+
 		</div>
+
+	</div>
+
+	<div class="flex gap-[24px] items-center mb-[24px]">
+
+		<div class="p-[16px] bg-white rounded-2xl w-[30%] h-[368px]">
+			<h1 class="font-bold font-semibold text-[20px] mb-0">Perfil</h1>
+			<p class="mb-0 text-[#828282] text-[14px]">Olá, Brien Lee. Bem-vindo ao seu Painel!</p>
+			<div class="flex items-center gap-y-4 justify-center flex-col">
+				<img src="images/LayoutSix/profile.png" />
+				<h1 class="font-bold font-semibold text-[20px] mb-0">Samantha Liondy</h1>
+				<p class="mb-0 text-[#828282] text-[14px]">Product Designer</p>
+				<div class="flex gap-3 items-center">
+					<div class="bg-[#F8F8F8] w-[55px] h-[55px] items-center flex justify-center rounded-full">
+						<img src="images/LayoutTwo/Icons/Instagram.png" alt="">
+					</div>
+					<div class="bg-[#F8F8F8] w-[55px] h-[55px] items-center flex justify-center rounded-full">
+						<img src="images/LayoutTwo/Icons/Twitter.png" alt="">
+					</div>
+					<div class="bg-[#F8F8F8] w-[55px] h-[55px] items-center flex justify-center rounded-full">
+						<img src="images/LayoutTwo/Icons/Linkedin.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<table class="rounded-3xl table-auto w-[70%] h-[368px]">
+			<thead class="border-b rounded-3xl">
+				<tr class="bg-[#F0F1F3] rounded-3xl">
+					<th scope="col" class="text-sm font-medium text-gray-900 py-4 px-6 text-left font-bold">
+						<div class="flex items-center justify-between font-bold">
+							<div class="flex items-center gap-3">
+								<span>Projeto</span>
+							</div>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+								<path fill-rule="evenodd"
+									d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z"
+									clip-rule="evenodd" />
+							</svg>
+						</div>
+					</th>
+					<th scope="col" class="text-sm font-medium text-gray-900 py-4 px-6 text-left font-bold">
+						<div class="flex items-center justify-between font-bold">
+							<span>Progresso</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+								<path fill-rule="evenodd"
+									d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z"
+									clip-rule="evenodd" />
+							</svg>
+						</div>
+					</th>
+					<th scope="col" class="text-sm font-medium text-gray-900 py-4 px-6 text-left font-bold">
+						<div class="flex items-center justify-between font-bold">
+							<span>Data inicial</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+								<path fill-rule="evenodd"
+									d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z"
+									clip-rule="evenodd" />
+							</svg>
+						</div>
+					</th>
+					<th scope="col" class="text-sm font-medium text-gray-900 py-4 px-6 text-left font-bold">
+						<div class="flex items-center justify-between font-bold">
+							<span>Data Final</span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+								<path fill-rule="evenodd"
+									d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z"
+									clip-rule="evenodd" />
+							</svg>
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="border-b bg-white" v-for="(data, index) in data_mock" :key="data?.id">
+					<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap flex gap-3 items-center ">
+						<div class="flex items-center gap-2">
+							<div
+								class="bg-[#F4ECFB] w-[44px] h-[44px] rounded-[8px] flex items-center justify-center text-[#013C94] font-semibold text-[16px]">
+								{{ data?.latterName }}</div>
+							<div>
+								<h1 class="mb-0 text-[#1D1F2C] font-semibold text-[14px]">{{ data?.projectName }}</h1>
+								<p class="mb-0 text-[#667085] text-[12px]">{{ data?.name }}</p>
+							</div>
+						</div>
+					</td>
+					<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+						<div class="flex items-center gap-3">
+							<div class="w-[59px] bg-[#E0E2E7] rounded-2xl">
+								<div
+									:class="`w-[${data?.progress.toString()}]`, data?.progress !== '100%' ? 'bg-[#EB4335]' : 'bg-[#12B886]'"
+									class="h-[8px] rounded-2xl"></div>
+							</div>
+							<span :class="data?.progress !== '100%' ? 'text-[#EB4335]' : 'text-[#12B886]'"
+								class="font-bold text-[12px]">{{ data.progress }}</span>
+						</div>
+					</td>
+					<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+						<span class="font-bold">{{ data?.initialDate }}</span>
+					</td>
+					<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap ">
+						<span class="font-bold">{{ data?.endDate }}</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
 	</div>
 
 	<!-- Chart -->
-	<div class="flex items-center gap-3">
-		<div class="bg-white px-4 py-5 rounded-xl w-full h-[550px]">
+	<div class="flex items-center gap-[24px]">
+		<div class="bg-white px-4 py-5 rounded-xl w-[30%] h-[550px]">
 			<div class="flex justify-between items-center">
 				<div class="flex flex-col">
 					<h1 class="mb-0 font-bold text-[20px]">Estatística</h1>
@@ -92,31 +214,133 @@
 					</button>
 				</div>
 			</div>
-			<Chart :chart-data="chartDataPie" :chart-options="chartOptionsPie" type="bar" :responsive="true"
-				styleDynamic="w-full 2xl:h-[350px] h-[150px]" />
-		</div>
-		<div class="bg-white px-4 py-5 rounded-xl w-full h-[550px]">
-			<div class="flex items-center justify-between mb-[44px]">
-				<div class="flex gap-3">
-					<div class="flex flex-col">
-					<h1 class="mb-0 font-bold text-[20px]">Todos projetos</h1>
-					<p class="mb-0 text-[#777980] text-[14px] font-semibold">Com base no status</p>
-				</div>
-				</div>
-				<button>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-						<path fill-rule="evenodd"
-							d="M10.5 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"
-							clip-rule="evenodd" />
-					</svg>
-				</button>
-			</div>
 			<Chart :chart-data="chartDataPie" :chart-options="chartOptionsPie" type="pie" :responsive="true"
-				styleDynamic="w-full 2xl:h-[350px] h-[150px]" />
+					styleDynamic="w-full 2xl:h-[350px] h-[150px]" />
+		</div>
+		<div class="bg-white px-4 py-5 rounded-xl w-[70%] h-[550px]">
+			<div class="mb-[44px]">
+
+				<div class="flex justify-between items-center w-full">
+					<h1 class="mb-0 font-bold text-[20px]">Mais vendida</h1>
+					<div>
+						<p class="mb-0 text-[14px] font-semibold flex items-center gap-3 text-[#0E8A74] text-[12px]">Essa semana
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+								<path fill-rule="evenodd"
+									d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+									clip-rule="evenodd" />
+							</svg>
+						</p>
+					</div>
+				</div>
+
+			</div>
+			<div class="w-full flex items-center justify-between">
+				<div class="flex items-center gap-7 px-[41px]">
+					<div class="flex flex-col gap-y-4">
+						<div class="bg-gray-300/90 w-[14px] rounded-t-2xl h-[265px] flex items-end">
+							<span class="w-full h-[80%] rounded-t-2xl bg-[#FB3E7A]"></span>
+						</div>
+						<span>D</span>
+					</div>
+					<div class="flex flex-col gap-y-4">
+						<div class="bg-gray-300/90 w-[14px] rounded-t-2xl h-[265px] flex items-end">
+							<span class="w-full h-[70%] rounded-t-2xl bg-[#FB3E7A]"></span>
+						</div>
+						<span>S</span>
+					</div>
+					<div class="flex flex-col gap-y-4">
+						<div class="bg-gray-300/90 w-[14px] rounded-t-2xl h-[265px] flex items-end">
+							<span class="w-full h-[86%] rounded-t-2xl bg-[#FB3E7A]"></span>
+						</div>
+						<span>T</span>
+					</div>
+					<div class="flex flex-col gap-y-4">
+						<div class="bg-gray-300/90 w-[14px] rounded-t-2xl h-[265px] flex items-end">
+							<span class="w-full h-[50%] rounded-t-2xl bg-[#FB3E7A]"></span>
+						</div>
+						<span>Q</span>
+					</div>
+					<div class="flex flex-col gap-y-4">
+						<div class="bg-gray-300/90 w-[14px] rounded-t-2xl h-[265px] flex items-end">
+							<span class="w-full h-[30%] rounded-t-2xl bg-[#FB3E7A]"></span>
+						</div>
+						<span>Q</span>
+					</div>
+					<div class="flex flex-col gap-y-4">
+						<div class="bg-gray-300/90 w-[14px] rounded-t-2xl h-[265px] flex items-end">
+							<span class="w-full h-[70%] rounded-t-2xl bg-[#0E8A74]"></span>
+						</div>
+						<span>S</span>
+					</div>
+					<div class="flex flex-col gap-y-4">
+						<div class="bg-gray-300/90 w-[14px] rounded-t-2xl h-[265px] flex items-end">
+							<span class="w-full h-[40%] rounded-t-2xl bg-[#FB3E7A]"></span>
+						</div>
+						<span>S</span>
+					</div>
+				</div>
+				<Chart :chart-data="chartDataPie" :chart-options="chartOptionsPie" type="doughnut" :responsive="true"
+					styleDynamic="w-full 2xl:h-[350px] h-[150px]" />
+			</div>
 		</div>
 	</div>
 
 </template>
+
+<script>
+export default {
+	data() {
+		return {
+			interval: null,
+			time: null,
+			dateString: null
+		}
+	},
+	methods: {
+		updateTime() {
+			const now = new Date();
+			// Obter as horas, minutos e segundos
+			const hours = now.getHours();
+			const minutes = now.getMinutes();
+			const seconds = now.getSeconds();
+			// Converter para formato AM/PM
+			const timeString = hours >= 12 ? 'PM' : 'AM';
+			const formattedHours = hours % 12 || 12;
+			const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+			const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
+			// Atualizar o estado
+			this.time = `${formattedHours}:${formattedMinutes}:${formattedSeconds} ${timeString}`;
+		},
+		updateDateString() {
+			const now = new Date();
+			// Obter o dia da semana, dia do mês, mês e ano
+			const daysOfWeek = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+			const monthsOfYear = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+			const dayOfWeek = daysOfWeek[now.getDay()];
+			const dayOfMonth = now.getDate();
+			const month = monthsOfYear[now.getMonth()];
+			const year = now.getFullYear();
+			// Construir a string de data
+			this.dateString = `${dayOfWeek}, ${dayOfMonth} de ${month} de ${year}`;
+		}
+	},
+	created() {
+		// Atualizar o tempo a cada segundo
+		this.interval = setInterval(() => {
+			this.updateTime();
+		}, 1000);
+
+		// Atualizar a string de data a cada segundo
+		this.interval = setInterval(() => {
+			this.updateDateString();
+		}, 1000);
+	},
+	beforeDestroy() {
+		// Prevenir vazamento de memória
+		clearInterval(this.interval);
+	}
+}
+</script>
 
 
 
@@ -146,7 +370,12 @@ const props = defineProps({
 	AlertaError: Object,
 });
 
-
+const data_mock = [
+	{ latterName: 'SR', name: 'Sosro', projectName: 'Internal CMS Tools', progress: '80%', initialDate: '19/03/2024', endDate: '25/03/2024' },
+	{ latterName: 'EV', name: 'Elavania', projectName: 'E-Commerce App Phase 01', progress: '100%', initialDate: '19/03/2024', endDate: '25/03/2024' },
+	{ latterName: 'SR', name: 'Sosro', projectName: 'Internal CMS Tools', progress: '60%', initialDate: '21/03/2024', endDate: '25/03/2024' },
+	{ latterName: 'EV', name: 'Elavania', projectName: 'E-Commerce App Phase 01', progress: '20%', initialDate: '21/03/2024', endDate: '25/03/2024' },
+]
 
 const showDeleteModal = ref({
 	id: null,
