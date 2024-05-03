@@ -1,48 +1,13 @@
 <template>
 
-	<div class="p-[44px] bg-white rounded-t-2xl">
+	<div class="p-[44px] rounded-t-2xl">
 
-		<div class="flex items-center justify-between">
-			<div class="">
-				<h1 class="font-bold text-[28px] mb-0">Bem-vindo de volta, Pedro!</h1>
-				<p class="mb-0 text-gray-400/90">Dashboard /</p>
-			</div>
-
-			<div class="flex items-center gap-5">
-
-				<img class="w-[55px] h-[55px] rounded-full" src="images/LayoutThree/placeholderUser.png" />
-
-				<button
-					class="w-[55px] h-[55px] rounded-full border border-gray-400/90 flex items-center justify-center text-gray-400/90 border border-gray-400/90">
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-						stroke="currentColor" class="w-6 h-6">
-						<path stroke-linecap="round" stroke-linejoin="round"
-							d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
-					</svg>
-				</button>
-
-				<button
-					class="w-[55px] h-[55px] rounded-full border border-gray-400/90 flex items-center justify-center text-gray-400/90 border border-gray-400/90">
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-						stroke="currentColor" class="w-6 h-6">
-						<path stroke-linecap="round" stroke-linejoin="round"
-							d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-					</svg>
-				</button>
-
-			</div>
-
-		</div>
-
-		<div class="border-b border-gray-400/90 mt-4 mb-6"></div>
-
-		<h1 class="font-semibold text-[24px] text-[#0B1023]">Visão Geral</h1>
-		<p class="mb-0 font-semibold text-gray-400/90">Mês passado</p>
+		<h1 class="text-gray-400/90 font-[16px] mb-0"><span class="text-[#0365F8] font-bold">Dashboard/</span> Home</h1>
 
 		<div class="flex items-center gap-3 mt-[32px]">
 
-			<div class="px-[24px] py-[11px] flex-grow flex items-center gap-3 border border-gray-300/90 rounded-xl ">
-				<div class="rounded-full bg-[#EAF0FF] w-[64px] h-[64px] flex items-center justify-center text-[#1A5EFF]">
+			<div class="px-[24px] bg-white flex-col py-[11px] flex-grow flex gap-3 rounded-xl ">
+				<div class="rounded-full bg-[#EAF0FF] w-[40px] h-[40px] flex items-center justify-center text-[#1A5EFF]">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
 						<path fill-rule="evenodd"
 							d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM2.25 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM6.31 15.117A6.745 6.745 0 0 1 12 12a6.745 6.745 0 0 1 6.709 7.498.75.75 0 0 1-.372.568A12.696 12.696 0 0 1 12 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 0 1-.372-.568 6.787 6.787 0 0 1 1.019-4.38Z"
@@ -52,13 +17,16 @@
 					</svg>
 				</div>
 				<div class="flex flex-col">
-					<p class="mb-0 text-[12px] text-gray-300/90">Usuários</p>
-					<h1 class="mb-0 font-bold text-[24px]">76 mil</h1>
+					<p class="mb-0 text-[16px] text-[#667085] ">Item A</p>
+					<div class="flex items-center gap-3">
+						<h1 class="font-semibold text-[24px]">$75,500</h1>
+						<p class="bg-[#E7F4EE] px-[6px] py-[2px] text-bold text-[12px] text-[#0D894F] font-bold">+10%</p>
+					</div>
 				</div>
 			</div>
 
-			<div class="px-[24px] py-[11px] flex-grow flex items-center gap-3 border border-gray-300/90 rounded-xl ">
-				<div class="rounded-full bg-[#FFE8E0] w-[64px] h-[64px] flex items-center justify-center text-[#FE5152]">
+			<div class="px-[24px] bg-white flex-col py-[11px] flex-grow flex gap-3 rounded-xl ">
+				<div class="rounded-full bg-[#FFE8E0] w-[40px] h-[40px] flex items-center justify-center text-[#FE5152]">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
 						<path fill-rule="evenodd"
 							d="M2.25 6a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V6Zm18 3H3.75v9a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V9Zm-15-3.75A.75.75 0 0 0 4.5 6v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75V6a.75.75 0 0 0-.75-.75H5.25Zm1.5.75a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75H7.5a.75.75 0 0 1-.75-.75V6Zm3-.75A.75.75 0 0 0 9 6v.008c0 .414.336.75.75.75h.008a.75.75 0 0 0 .75-.75V6a.75.75 0 0 0-.75-.75H9.75Z"
@@ -66,13 +34,16 @@
 					</svg>
 				</div>
 				<div class="flex flex-col">
-					<p class="mb-0 text-[12px] text-gray-300/90">Projetos concluídos</p>
-					<h1 class="mb-0 font-bold text-[24px]">15</h1>
+					<p class="mb-0 text-[16px] text-[#667085] ">Item B</p>
+					<div class="flex items-center gap-3">
+						<h1 class="font-semibold text-[24px]">31,500</h1>
+						<p class="bg-[#E7F4EE] px-[6px] py-[2px] text-bold text-[12px] text-[#0D894F] font-bold">+15%</p>
+					</div>
 				</div>
 			</div>
 
-			<div class="px-[24px] py-[11px] flex-grow flex items-center gap-3 border border-gray-300/90 rounded-xl ">
-				<div class="rounded-full bg-[#FFF4D2] w-[64px] h-[64px] flex items-center justify-center text-[#F0B708]">
+			<div class="px-[24px] bg-white flex-col py-[11px] flex-grow flex gap-3 rounded-xl ">
+				<div class="rounded-full bg-[#FFF4D2] w-[40px] h-[40px] flex items-center justify-center text-[#F0B708]">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
 						<path fill-rule="evenodd"
 							d="M7.5 6v.75H5.513c-.96 0-1.764.724-1.865 1.679l-1.263 12A1.875 1.875 0 0 0 4.25 22.5h15.5a1.875 1.875 0 0 0 1.865-2.071l-1.263-12a1.875 1.875 0 0 0-1.865-1.679H16.5V6a4.5 4.5 0 1 0-9 0ZM12 3a3 3 0 0 0-3 3v.75h6V6a3 3 0 0 0-3-3Zm-3 8.25a3 3 0 1 0 6 0v-.75a.75.75 0 0 1 1.5 0v.75a4.5 4.5 0 1 1-9 0v-.75a.75.75 0 0 1 1.5 0v.75Z"
@@ -80,99 +51,104 @@
 					</svg>
 				</div>
 				<div class="flex flex-col">
-					<p class="mb-0 text-[12px] text-gray-300/90">Projetos pendentes</p>
-					<h1 class="mb-0 font-bold text-[24px]">6</h1>
+					<p class="mb-0 text-[16px] text-[#667085] ">Item C</p>
+					<div class="flex items-center gap-3">
+						<h1 class="font-semibold text-[24px]">247</h1>
+						<p class="bg-[#F0F1F3] px-[6px] py-[2px] text-bold text-[12px] text-[#667085] font-bold">0%</p>
+					</div>
 				</div>
 			</div>
 
-			<div class="px-[24px] py-[11px] flex-grow flex items-center gap-3 border border-gray-300/90 rounded-xl ">
-				<div class="rounded-full bg-[#F2EAFF] w-[64px] h-[64px] flex items-center justify-center text-[#742EFE]">
+			<div class="px-[24px] bg-white flex-col py-[11px] flex-grow flex gap-3 rounded-xl ">
+				<div class="rounded-full bg-[#F2EAFF] w-[40px] h-[40px] flex items-center justify-center text-[#742EFE]">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
 						<path
 							d="M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" />
 					</svg>
 				</div>
 				<div class="flex flex-col">
-					<p class="mb-0 text-[12px] text-gray-300/90">Faturamento</p>
-					<h1 class="mb-0 font-bold text-[24px]">R$ 10 mil</h1>
+					<p class="mb-0 text-[16px] text-[#667085] ">Item D</p>
+					<div class="flex items-center gap-3">
+						<h1 class="font-semibold text-[24px]">$24,500</h1>
+						<p class="bg-[#FEEDEC] px-[6px] py-[2px] text-bold text-[12px] text-[#F04438] font-bold">-25%</p>
+					</div>
 				</div>
 			</div>
 
 		</div>
 
-	</div>
 
-	<div class="px-[44px] bg-white rounded-b-2xl mb-[24px]">
+		<!-- Chart -->
+		<div class="flex items-center gap-[24px] mt-[32px]">
+			<div class="bg-white px-4 py-5 rounded-xl w-[80%] h-[551px]">
+				<div class="flex justify-between items-center">
+					<div class="flex flex-col">
+						<h1 class="mb-0 font-bold text-[20px]">Vendas</h1>
+						<p class="mb-0 text-[#777980] text-[14px] font-semibold">Objetivo</p>
+					</div>
+					<div>
+						<button>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+								<path fill-rule="evenodd"
+									d="M10.5 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"
+									clip-rule="evenodd" />
+							</svg>
+						</button>
+					</div>
+				</div>
+				<Chart :chart-data="chartDataPie" :chart-options="chartOptionsPie" type="line" :responsive="true"
+					styleDynamic="w-full 2xl:h-[350px] h-[150px]" />
+			</div>
 
-		<div class="flex items-center gap-[72px]">
+			<div class="p-[33px] bg-white w-[20%] h-[551px] rounded-xl">
+				<h1 class="text-[18px] font-semibold">Cliente</h1>
 
-			<button class="text-[#0B1023] text-[16px] border-b-4 boder-gray-600/90 pb-[32px]">Relatórios</button>
-			<button class="text-gray-300/90 text-[16px] pb-[32px]">Pagamentos</button>
-			<button class="text-gray-300/90 text-[16px] pb-[32px]">Produtos</button>
+				<div class="flex justify-between items-center mt-[20px]">
+					<div class="flex items-center gap-3">
+						<div class="bg-[#F0F1F3] w-[40px] h-[40px] rounded-full text-gray-400/90 items-center flex justify-center">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+								<path fill-rule="evenodd"
+									d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+									clip-rule="evenodd" />
+							</svg>
+						</div>
+						<span class="font-semibold text-[14px]">Cliente</span>
+					</div>
+					<span class="font-semibold text-[14px]">Josh Adam</span>
+				</div>
+
+				<div class="flex justify-between items-center mt-[20px]">
+					<div class="flex items-center gap-3">
+						<div class="bg-[#F0F1F3] w-[40px] h-[40px] rounded-full text-gray-400/90 items-center flex justify-center">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+								<path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+								<path
+									d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+							</svg>
+						</div>
+						<span class="font-semibold text-[14px]">Email</span>
+					</div>
+					<span class="font-semibold text-[14px]">joshadam@mail.com</span>
+				</div>
+
+				<div class="flex justify-between items-center mt-[20px]">
+					<div class="flex items-center gap-3">
+						<div class="bg-[#F0F1F3] w-[40px] h-[40px] rounded-full text-gray-400/90 items-center flex justify-center">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+								<path d="M10.5 18.75a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" />
+								<path fill-rule="evenodd"
+									d="M8.625.75A3.375 3.375 0 0 0 5.25 4.125v15.75a3.375 3.375 0 0 0 3.375 3.375h6.75a3.375 3.375 0 0 0 3.375-3.375V4.125A3.375 3.375 0 0 0 15.375.75h-6.75ZM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 0 1 7.5 19.875V4.125Z"
+									clip-rule="evenodd" />
+							</svg>
+						</div>
+						<span class="font-semibold text-[14px]">Telefone</span>
+					</div>
+					<span class="font-semibold text-[14px]">909 427 2910</span>
+				</div>
+
+			</div>
 
 		</div>
-
-	</div>
-
-	<!-- Chart -->
-	<div class="flex items-center gap-[24px]">
-		<div class="bg-white px-4 py-5 rounded-xl w-[80%] h-[551px]">
-			<div class="flex justify-between items-center">
-				<div class="flex flex-col">
-					<h1 class="mb-0 font-bold text-[20px]">Estatística</h1>
-					<p class="mb-0 text-[#777980] text-[14px] font-semibold">Receitas e Despesas</p>
-				</div>
-				<div>
-					<button>
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-							<path fill-rule="evenodd"
-								d="M10.5 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm0 6a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"
-								clip-rule="evenodd" />
-						</svg>
-					</button>
-				</div>
-			</div>
-			<Chart :chart-data="chartDataPie" :chart-options="chartOptionsPie" type="line" :responsive="true"
-				styleDynamic="w-full 2xl:h-[350px] h-[150px]" />
-		</div>
-
-		<div class="p-[33px] bg-white w-[20%] h-[551px]">
-			<h1 class="pb-[15px] border-b border-gray-300/90 text-[20px] font-semibold mb-15px">Vendas recentes</h1>
-
-			<div class="flex items-center justify-between mt-[15px]">
-				<div class="flex flex-col">
-					<h1 class="font-semibold text-[16px]">Creme dental</h1>
-					<p class="text-[14px] text-gray-300/90">Março, 20 2024</p>
-				</div>
-				<h1 class="font-bold mb-0">R$ 20</h1>
-			</div>
-
-			<div class="flex items-center justify-between mt-[15px]">
-				<div class="flex flex-col">
-					<h1 class="font-semibold text-[16px]">Escova</h1>
-					<p class="text-[14px] text-gray-300/90">Março, 20 2024</p>
-				</div>
-				<h1 class="font-bold mb-0">R$ 25</h1>
-			</div>
-
-			<div class="flex items-center justify-between mt-[15px]">
-				<div class="flex flex-col">
-					<h1 class="font-semibold text-[16px]">Fio Dental</h1>
-					<p class="text-[14px] text-gray-300/90">Março, 20 2024</p>
-				</div>
-				<h1 class="font-bold mb-0">R$ 20</h1>
-			</div>
-
-			<div class="flex items-center justify-between mt-[15px]">
-				<div class="flex flex-col">
-					<h1 class="font-semibold text-[16px]">Creme dental</h1>
-					<p class="text-[14px] text-gray-300/90">Março, 20 2024</p>
-				</div>
-				<h1 class="font-bold mb-0">R$ 20</h1>
-			</div>
-
-		</div>
-
 	</div>
 
 </template>

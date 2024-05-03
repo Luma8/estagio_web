@@ -1,49 +1,57 @@
 <template>
   <form @submit.prevent="submit">
-    <div class="h-screen flex items-center">
-
-      <div class="w-[35%] h-full relative">
-        <img class="w-full h-full img-pixel" src="images/LayoutSeven/Login.png" />
-      </div>
-
-      <div class="w-[65%] relative bg-white rounded-xl px-[230px] py-[76px] flex flex-col justify-center item-center h-full">
-
-        <div class="my-[49px] flex-col flex ">
-          <h1 class="font-semibold text-[48px] mb-[20px]">Log in</h1>
-          <p class="text-[16px]">Amet minim mollit non deserunt ullamco est sit <br> aliqua dolor do amet sint. </p>
+    <div class="p-[20px] h-screen div-background relative flex items-center justify-center">
+      <div class="">
+        <div class="my-[49px] flex items-center justify-center">
+          <img src="images/LayoutThree/Logo.png">
         </div>
 
-        <button class="flex items-center gap-3 border justify-center rounded-3xl border-[#EAEAEA] py-[18px]">
-          <img src="images/LayoutOne/google.png" />
-          <span>Sign in with Goggle</span>
+        <div class="flex flex-col mb-[32px]">
+          <label class="text-white text-[16px]">Digite seu e-mail</label>
+          <input type="text"
+            class="px-3 py-2 font-semibold text-[16px] text-white outline-none w-full border-0 bg-[#3f467db0] rounded-md mt-[6px]"
+            v-model="form.email" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');" required />
+        </div>
+
+        <div class="flex flex-col">
+          <label class="text-white text-[16px]">Digite sua senha</label>
+          <input type="password"
+            class="px-3 py-2 font-semibold text-[16px] text-white outline-none w-full border-0 bg-[#3f467db0] rounded-md mt-[6px]"
+            v-model="form.password" :feedback="false" toggleMask autocomplete="off" readonly
+            onfocus="this.removeAttribute('readonly');" required />
+        </div>
+
+        <div class="w-full flex justify-end">
+          <p class="my-[32px] text-white text-[16px] w-[250px] w-full">
+            Esqueceu sua senha? <a href="#" class="text-[#FB3434]">Clique Aqui.</a>
+          </p>
+        </div>
+
+        <button type="submit"
+          class="flex items-center gap-3 bg-[#FB3434] w-full rounded-xl py-3 px-[61px] justify-center">
+          <span class="font-bold text-[16px] text-white">Entrar</span>
         </button>
 
-        <div class="flex items-center gap-1 my-[32px]">
-          <div class="border border-[#EAEAEA] flex-grow"></div>
-          <span class="flex-grow justify-center items-center flex text-[12px]">Ou entre como</span>
-          <div class="border border-[#EAEAEA] flex-grow"></div>
+        <div class="flex items-center my-[46px]">
+          <div class="border-b border-white flex-grow"></div>
+          <p class="mb-0 flex-grow text-white text-center">Ou entre com</p>
+          <div class="border-b border-white flex-grow"></div>
         </div>
 
-        <input type="text" class="px-[24px] py-[16px] rounded-3xl border border-[#EAEAEA] mb-[32px]"
-          placeholder="Digite seu e-mail" v-model="form.email" autocomplete="off" readonly
-          onfocus="this.removeAttribute('readonly');" required />
-
-        <input type="password" class="px-[24px] py-[16px] rounded-3xl border border-[#EAEAEA] mb-[32px]"
-          placeholder="Digite sua senha" v-model="form.password" autocomplete="off" readonly
-          onfocus="this.removeAttribute('readonly');" required />
-
-
-        <button type="submit" class="flex items-center gap-3 bg-[#013C94] rounded-3xl px-[24px] py-[16px] justify-center">
-          <span class="text-[16px] font-bold text-white">Entrar</span>
-        </button>
-
-        <div class="flex items-center justify-between my-[43px]">
-          <div class="flex items-center gap-4">
-            <input type="checkbox">
-            <span>Manter-me Logado</span>
-          </div>
-          <a href="#" class="text-[#013C94] font-bold border-b-2 border-[#013C94]">Esqueci sua senha?</a>
+        <div class="flex item-center gap-3 mb-[90px]">
+          <button
+            class="flex justify-center flex-grow items-center gap-4 border border-[#EAEAEA] bg-[#3f467db0] px-[41px] py-[16px] rounded-xl">
+            <img src="images/LayoutOne/google.png" alt="">
+            <span class="text-white">Google</span>
+          </button>
+          <button
+            class="flex justify-center flex-grow items-center gap-4 border border-[#EAEAEA] bg-[#3f467db0] px-[41px] py-[16px] rounded-xl">
+            <img src="images/LayoutOne/Facebook.png" alt="">
+            <span class="text-white">Facebook</span>
+          </button>
         </div>
+
+        <p class="mb-0 text-white">© 2024. Todos os direitos reservados, Políticas de Privacidade © </p>
 
       </div>
     </div>
@@ -95,24 +103,11 @@ onUnmounted(() => {
 
 <style>
 .div-background {
-  background-image: url("/images/LayoutFive/photo.png");
+  background-image: url("/images/LayoutThree/Background.png");
   background-size: cover;
   background-attachment: fixed;
   background-size: 100% 100% 100% 100%;
   background-repeat: no-repeat;
-}
-
-.img-pixel {
-  image-rendering: -moz-crisp-edges;
-  /* Firefox */
-  image-rendering: -webkit-optimize-contrast;
-  /* Webkit (Chrome/Safari) */
-  image-rendering: optimizeQuality;
-  /* Internet Explorer */
-  -ms-interpolation-mode: nearest-neighbor;
-  /* Internet Explorer */
-  image-rendering: pixelated;
-  /* Padrão */
 }
 
 body {
