@@ -1,58 +1,42 @@
 <template>
   <form @submit.prevent="submit">
-    <div class="p-[20px] h-screen div-background relative flex items-center justify-center">
-      <div class="">
+    <div class="bg-white relative flex items-center justify-center">
+      <div class="w-[50%] h-screen py-[64px] px-[160px]">
         <div class="my-[49px] flex items-center justify-center">
-          <img src="images/LayoutThree/Logo.png">
+          <img src="images/LayoutNine/Logo.png">
         </div>
 
         <div class="flex flex-col mb-[32px]">
-          <label class="text-white text-[16px]">Digite seu e-mail</label>
+          <label class="text-[#858585] text-[16px]">Digite seu e-mail</label>
           <input type="text"
-            class="px-3 py-2 font-semibold text-[16px] text-white outline-none w-full border-0 bg-[#3f467db0] rounded-md mt-[6px]"
+            class="px-[20px] py-[12px] font-semibold text-[16px] outline-none w-full border-0 bg-gray-200/90 rounded-md mt-[6px] text-[#998AA6]"
             v-model="form.email" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');" required />
         </div>
 
         <div class="flex flex-col">
-          <label class="text-white text-[16px]">Digite sua senha</label>
+          <label class="text-[#858585] text-[16px]">Digite sua senha</label>
           <input type="password"
-            class="px-3 py-2 font-semibold text-[16px] text-white outline-none w-full border-0 bg-[#3f467db0] rounded-md mt-[6px]"
+            class="px-[20px] py-[12px] font-semibold text-[16px] outline-none w-full border-0 bg-gray-200/90 rounded-md mt-[6px] text-[#998AA6]"
             v-model="form.password" :feedback="false" toggleMask autocomplete="off" readonly
             onfocus="this.removeAttribute('readonly');" required />
         </div>
 
-        <div class="w-full flex justify-end">
-          <p class="my-[32px] text-white text-[16px] w-[250px] w-full">
-            Esqueceu sua senha? <a href="#" class="text-[#FB3434]">Clique Aqui.</a>
-          </p>
+        <div class="w-full flex">
+          <a href="#" class="mb-[32px] text-[#013C94] font-bold text-[16px] w-full">
+            Esqueceu sua senha? 
+          </a>
         </div>
 
         <button type="submit"
-          class="flex items-center gap-3 bg-[#FB3434] w-full rounded-xl py-3 px-[61px] justify-center">
+          class="flex items-center gap-3 bg-[#013C94] w-full rounded-md py-3 px-[61px] justify-center">
           <span class="font-bold text-[16px] text-white">Entrar</span>
         </button>
 
-        <div class="flex items-center my-[46px]">
-          <div class="border-b border-white flex-grow"></div>
-          <p class="mb-0 flex-grow text-white text-center">Ou entre com</p>
-          <div class="border-b border-white flex-grow"></div>
-        </div>
+        <p class="mb-0 text-center mt-[141px]">© 2024. Todos os direitos reservados, Políticas de <br> Privacidade © </p>
 
-        <div class="flex item-center gap-3 mb-[90px]">
-          <button
-            class="flex justify-center flex-grow items-center gap-4 border border-[#EAEAEA] bg-[#3f467db0] px-[41px] py-[16px] rounded-xl">
-            <img src="images/LayoutOne/google.png" alt="">
-            <span class="text-white">Google</span>
-          </button>
-          <button
-            class="flex justify-center flex-grow items-center gap-4 border border-[#EAEAEA] bg-[#3f467db0] px-[41px] py-[16px] rounded-xl">
-            <img src="images/LayoutOne/Facebook.png" alt="">
-            <span class="text-white">Facebook</span>
-          </button>
-        </div>
-
-        <p class="mb-0 text-white">© 2024. Todos os direitos reservados, Políticas de Privacidade © </p>
-
+      </div>
+      <div class="w-[50%] h-screen">
+        <img src="images/LayoutNine/bg.png" class="w-full h-full"/>
       </div>
     </div>
   </form>
