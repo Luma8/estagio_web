@@ -1,52 +1,67 @@
 <template>
   <div>
-    <h1 class="font-bold text-[24px] mb-[8px]">Dashboard Admin</h1>
+    <h1 class="font-bold text-[24px] mb-0">Cadastrar</h1>
     <div class="flex items-center gap-4">
-      <span class="font-semibold text-[14px] text-[#0365F8]">Dashboard</span>
+      <span class="font-semibold text-[14px] text-[#26B893]">Dashboard</span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-[#989898]">
         <path fill-rule="evenodd"
           d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
           clip-rule="evenodd" />
       </svg>
-      <span class="font-semibold text-[14px] text-[#989898]">Listagem</span>
+      <span class="font-semibold text-[14px] text-[#26B893]">Listagem</span>
     </div>
 
-    <div class="p-[12px] bg-white rounded-md mt-[12px]">
-
-      <div class="flex flex-col mb-[12px]">
-        <label class="text-[#858585] text-[16px] mb-[9px]">Digite seu nome</label>
-        <input value="kleber Silvar"
-          class="px-[20px] py-[12px] rounded-md bg-gray-200/90 text-[#998AA6] placeholder:text-[#998AA6]" />
+    <div class="border p-[24px] border-gray-300/90 rounded-md bg-white mt-[12px]">
+      <h1 class="mb-0 font-bold text-[18px]">Dados Pessoais</h1>
+      <div class="flex items-center gap-4 mt-[14px]">
+        <div class="flex flex-col flex-grow gap-y-1">
+          <label>Nome</label>
+          <input placeholder="Nome" class="placeholder:text-[#858D9D] border rounded-md border-[#858D9D] px-[12px] py-[10px]" />
+        </div>
+        <div class="flex flex-col flex-grow gap-y-1">
+          <label>Sobrenome</label>
+          <input placeholder="Sobrenome" class="placeholder:text-[#858D9D] border rounded-md border-[#858D9D] px-[12px] py-[10px]" />
+        </div>
+        <div class="flex flex-col flex-grow gap-y-1">
+          <label>E-mail</label>
+          <input placeholder="E-mail" class="placeholder:text-[#858D9D] border rounded-md border-[#858D9D] px-[12px] py-[10px]" />
+        </div>
       </div>
-
-      <div class="flex flex-col mb-[12px]">
-        <label class="text-[#858585] text-[16px] mb-[9px]">Digite seu e-mail</label>
-        <input value="kleber Silvar"
-          class="px-[20px] py-[12px] rounded-md bg-gray-200/90 text-[#998AA6] placeholder:text-[#998AA6]" />
+      <div class="flex items-center gap-4 mt-[14px]">
+        <div class="flex flex-col flex-grow gap-y-1">
+          <label>Data de Nascimento</label>
+          <input placeholder="Data de Nascimento" class="placeholder:text-[#858D9D] border rounded-md border-[#858D9D] px-[12px] py-[10px]" />
+        </div>
+        <div class="flex flex-col flex-grow gap-y-1">
+          <label>Ocupação</label>
+          <input placeholder="Ocupação" class="placeholder:text-[#858D9D] border rounded-md border-[#858D9D] px-[12px] py-[10px]" />
+        </div>
+        <div class="flex flex-col flex-grow gap-y-1">
+          <label>Estado Civil</label>
+          <input placeholder="Estado Civil" class="placeholder:text-[#858D9D] border rounded-md border-[#858D9D] px-[12px] py-[10px]" />
+        </div>
       </div>
-
-      <div class="flex flex-col mb-[12px]">
-        <label class="text-[#858585] text-[16px] mb-[9px]">Digite sua data de nascimento</label>
-        <input value="kleber Silvar"
-          class="px-[20px] py-[12px] rounded-md bg-gray-200/90 text-[#998AA6] placeholder:text-[#998AA6]" />
-      </div>
-
-      <div class="flex flex-col mb-[12px]">
-        <label class="text-[#858585] text-[16px] mb-[9px]">digite sua profissão</label>
-        <input value="kleber Silvar"
-          class="px-[20px] py-[12px] rounded-md bg-gray-200/90 text-[#998AA6] placeholder:text-[#998AA6]" />
-      </div>
-
-      <div class="flex flex-col mb-[12px]">
-        <label class="text-[#858585] text-[16px] mb-[9px]">Digite seu estado civil</label>
-        <input value="kleber Silvar"
-          class="px-[20px] py-[12px] rounded-md bg-gray-200/90 text-[#998AA6] placeholder:text-[#998AA6]" />
-      </div>
-
-      <button class="bg-[#013C94] rounded-[2px] text-white px-[19px] py-[12px]">salvar</button>
-
     </div>
 
+    <div class="border p-[24px] border-gray-300/90 rounded-md bg-white mt-[12px]">
+      <h1 class="mb-0 font-bold text-[18px]">Dados Profissional</h1>
+      <div class="flex items-center gap-4 mt-[14px]">
+        <div class="flex flex-col flex-grow gap-y-1">
+          <label>Empresa</label>
+          <input placeholder="Empresa" class="placeholder:text-[#858D9D] border rounded-md border-[#858D9D] px-[12px] py-[10px]" />
+        </div>
+        <div class="flex flex-col flex-grow gap-y-1">
+          <label>Cargo</label>
+          <input placeholder="Cargo" class="placeholder:text-[#858D9D] border rounded-md border-[#858D9D] px-[12px] py-[10px]" />
+        </div>
+        <div class="flex flex-col flex-grow gap-y-1">
+          <label>Experiência</label>
+          <input placeholder="Experiência" class="placeholder:text-[#858D9D] border rounded-md border-[#858D9D] px-[12px] py-[10px]" />
+        </div>
+      </div>
+    </div>
+
+    <button class="text-white px-[19px] py-[12px] bg-[#26B893] text-[16px] font-bold mt-[12px] rounded-[12px]">Salvar</button>
 
   </div>
 </template>

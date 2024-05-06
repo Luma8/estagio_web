@@ -1,42 +1,39 @@
 <template>
   <form @submit.prevent="submit">
-    <div class="bg-white relative flex items-center justify-center">
-      <div class="w-[50%] h-screen py-[64px] px-[160px]">
+    <div class="bg-white py-[72px] h-screen div-background flex items-center justify-center">
+      <div class="bg-white py-[27px] px-[70px] rounded-md shadow-md">
         <div class="my-[49px] flex items-center justify-center">
-          <img src="images/LayoutNine/Logo.png">
+          <img src="images/LayoutOne/LogoLayout_one.png">
         </div>
 
         <div class="flex flex-col mb-[32px]">
           <label class="text-[#858585] text-[16px]">Digite seu e-mail</label>
           <input type="text"
-            class="px-[20px] py-[12px] font-semibold text-[16px] outline-none w-full border-0 bg-gray-200/90 rounded-md mt-[6px] text-[#998AA6]"
+            class="px-[20px] py-[12px] font-semibold text-[16px] outline-none w-full border border-gray-200/90 rounded-md mt-[6px] text-[#998AA6]"
             v-model="form.email" autocomplete="off" readonly onfocus="this.removeAttribute('readonly');" required />
         </div>
 
         <div class="flex flex-col">
           <label class="text-[#858585] text-[16px]">Digite sua senha</label>
           <input type="password"
-            class="px-[20px] py-[12px] font-semibold text-[16px] outline-none w-full border-0 bg-gray-200/90 rounded-md mt-[6px] text-[#998AA6]"
+            class="px-[20px] py-[12px] font-semibold text-[16px] outline-none w-full border border-gray-200/90 rounded-md mt-[6px] text-[#998AA6]"
             v-model="form.password" :feedback="false" toggleMask autocomplete="off" readonly
             onfocus="this.removeAttribute('readonly');" required />
         </div>
 
         <div class="w-full flex">
-          <a href="#" class="mb-[32px] text-[#013C94] font-bold text-[16px] w-full">
+          <a href="#" class="mb-[32px] text-[#26B893] font-bold text-[16px] w-full">
             Esqueceu sua senha? 
           </a>
         </div>
 
         <button type="submit"
-          class="flex items-center gap-3 bg-[#013C94] w-full rounded-md py-3 px-[61px] justify-center">
+          class="flex items-center gap-3 bg-[#26B893] w-full rounded-md py-3 px-[61px] justify-center">
           <span class="font-bold text-[16px] text-white">Entrar</span>
         </button>
 
         <p class="mb-0 text-center mt-[141px]">© 2024. Todos os direitos reservados, Políticas de <br> Privacidade © </p>
 
-      </div>
-      <div class="w-[50%] h-screen">
-        <img src="images/LayoutNine/bg.png" class="w-full h-full"/>
       </div>
     </div>
   </form>
@@ -87,7 +84,7 @@ onUnmounted(() => {
 
 <style>
 .div-background {
-  background-image: url("/images/LayoutThree/Background.png");
+  background-image: url("/images/LayoutTen/Background.png");
   background-size: cover;
   background-attachment: fixed;
   background-size: 100% 100% 100% 100%;
